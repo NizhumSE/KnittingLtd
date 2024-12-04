@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="asset/images/zalofavicon.png" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+    <!-- Locomotive Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css">
+    <style>
+        html {
+             scroll-behavior: smooth;
+            }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid black;
+            background-color: white;
+            max-height: 115px;
+            min-height: auto;
+        }
+        body {
+            font-family: 'Belleza', sans-serif;
+            background-color: #F5DDD2;
+        }
+        .custom-logo {
+        max-height: 130px;
+        max-width: 150px;
+        height: auto;
+        width: auto;
+    }
+        .hero-section {
+            padding: 50px 20px;
+            text-align: left;
+        }
+        .hero-text {
+            font-size: 2.5rem;
+            color: #E96304;
+            margin-bottom: 30px;
+        }
+        .responsive-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .image-card {
+            padding: 10px;
+        }
+        .fsize-18 {
+            font-size: 18px;
+        }
+        .fsize-20 {
+            font-size: 20px;
+        }
+        .gap-20{
+            gap: 20px;
+        }
+        .lead {
+            font-size: clamp(40px, 10vw, 135px);
+            line-height: 1em;
+        }
+
+                    @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .hero-section h1 {
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
+                animation-delay: 0.3s;
+            }
+
+            .hero-section p {
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
+                animation-delay: 0.6s;
+            }
+
+        /* rounded circl css */
+        .image-card {
+        position: relative; /* Ensure relative positioning for proper placement of round div */
+    }
+
+    .round-div {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 150px; /* Adjust size */
+        height: 150px; /* Adjust size */
+        border-radius: 50%;
+        background-color: #FFD700; /* Gold color for the background */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        animation: spin 10s linear infinite; /* Spins like a car wheel */
+        overflow: hidden; /* Ensure text fits inside the circle */
+        z-index: 2;
+    }
+
+    .star {
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    
+
+    .circle-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    pointer-events: none; /* Prevents unwanted interactions */
+}
+
+.circle-text span {
+    position: absolute;
+    transform-origin: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.circle-text span:nth-child(1) { transform: rotate(0deg) translate(45px) rotate(0deg); }
+.circle-text span:nth-child(2) { transform: rotate(22.5deg) translate(45px) rotate(-22.5deg); }
+.circle-text span:nth-child(3) { transform: rotate(45deg) translate(45px) rotate(-45deg); }
+.circle-text span:nth-child(4) { transform: rotate(67.5deg) translate(45px) rotate(-67.5deg); }
+.circle-text span:nth-child(5) { transform: rotate(90deg) translate(45px) rotate(-90deg); }
+.circle-text span:nth-child(6) { transform: rotate(112.5deg) translate(45px) rotate(-112.5deg); }
+.circle-text span:nth-child(7) { transform: rotate(135deg) translate(45px) rotate(-135deg); }
+.circle-text span:nth-child(8) { transform: rotate(157.5deg) translate(45px) rotate(-157.5deg); }
+.circle-text span:nth-child(9) { transform: rotate(180deg) translate(45px) rotate(-180deg); }
+.circle-text span:nth-child(10) { transform: rotate(202.5deg) translate(45px) rotate(-202.5deg); }
+.circle-text span:nth-child(11) { transform: rotate(225deg) translate(45px) rotate(-225deg); }
+.circle-text span:nth-child(12) { transform: rotate(247.5deg) translate(45px) rotate(-247.5deg); }
+.circle-text span:nth-child(13) { transform: rotate(270deg) translate(45px) rotate(-270deg); }
+.circle-text span:nth-child(14) { transform: rotate(292.5deg) translate(45px) rotate(-292.5deg); }
+.circle-text span:nth-child(15) { transform: rotate(315deg) translate(45px) rotate(-315deg); }
+.circle-text span:nth-child(16) { transform: rotate(337.5deg) translate(45px) rotate(-337.5deg); }
+
+
+
+
+
+    /* Spin animation for the round div */
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Rotate text animation */
+    /* @keyframes rotateText {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    } */
+
+
+            /* Custom Scrollbar */
+html {
+    scroll-behavior: smooth;
+    /* Custom scroll styling */
+    scrollbar-width: thin;
+    /* scrollbar-color: #E96304 #F5DDD2;  */
+    /* scrollbar thumb and track color */
+}
+
+body {
+    font-family: 'Belleza', sans-serif;
+    background-color: #F5DDD2;
+    /* For Webkit browsers (Chrome, Safari) */
+    -webkit-scrollbar-width: thin;
+    /* -webkit-scrollbar-color: #E96304 #F5DDD2; */
+}
+
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+    /* background-color: #E96304;  */
+    /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-track {
+    /* background-color: #F5DDD2;  */
+    /* Track color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+    
+
+        @media (max-width: 1200px) {
+            .lead {
+                font-size: 100px;
+            }
+        }
+        @media (max-width: 768px) {
+            .lead {
+                font-size: 70px;
+            }
+        }
+        @media (max-width: 480px) {
+            .lead {
+                font-size: 40px;
+            }
+        }
+        footer {
+            background-color: #E96304;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body data-scroll-container>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="asset/images/zkl.png" alt="Logo" class="img-fluid custom-logo">
+                </a>
+                <!-- Toggler for responsive menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="fsize-20 navbar-nav gap-20 ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Page 1</a></li>
+                                <li><a class="dropdown-item" href="#">Page 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Blog Post 1</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Post 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Production Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section" data-scroll-section>
+        <div class="container">
+            <h1 class="hero-text fsize-20">Our Manufacturing Magic</h1>
+            <p class="lead">Masters of Textile Manufacturing</p>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+            <section class="responsive-images py-5" data-scroll-section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 image-card">
+                        <img src="https://images.unsplash.com/photo-1733234976396-87cf34ae6038?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                            alt="Image 1" 
+                            class="img-fluid" 
+                            loading="lazy">
+                    </div>
+                    <div class="col-md-4 mt-5 image-card position-relative">
+                        <img src="https://images.unsplash.com/photo-1719937050814-72892488f741?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                            alt="Image 2" 
+                            class="img-fluid" 
+                            loading="lazy">
+                        <!-- Round Div -->
+                        <div class="round-div">
+                            <div class="star">★</div>
+                            <div class="circle-text">
+                                <span>E</span>
+                                <span>l</span>
+                                <span>e</span>
+                                <span>g</span>
+                                <span>a</span>
+                                <span>n</span>
+                                <span>c</span>
+                                <span>e</span>
+                                <span>D</span>
+                                <span>e</span>
+                                <span>s</span>
+                                <span>I</span>
+                                <span>G</span>
+                                <span>N</span>
+                                <span>I</span>
+                                <span>N</span>
+                                <span>G</span>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="col-md-4 image-card">
+                        <img src="https://plus.unsplash.com/premium_photo-1732569105984-a0fc4d858943?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                            alt="Image 3" 
+                            class="img-fluid" 
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Knitting Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Locomotive Smooth Scroll JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".hero-text", {
+            opacity: 0,
+            y: 50,
+            duration: 1.2,
+            ease: "power3.out",
+            delay: 0.3
+        });
+        gsap.from(".lead", {
+            opacity: 0,
+            y: 50,
+            duration: 1.2,
+            ease: "power3.out",
+            delay: 0.6
+        });
+    });
+</script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</body>
+</html>
