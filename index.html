@@ -74,6 +74,15 @@
             font-size: 20px;
         }
 
+        @media (max-width: 768px) { /* Adjust the max-width as needed */
+        .bg-mobile-white {
+            backdrop-filter: blur(8px); /* Applies the blur effect */
+            background-color: rgba(245, 221, 210, 0.8); /* #F5DDD2 with 80% opacity */
+            border-bottom-left-radius: 10px; /* Adds bottom-left radius */
+            border-bottom-right-radius: 10px; /* Adds bottom-right radius */
+            }
+        }
+
         .gap-20 {
             gap: 20px;
         }
@@ -338,7 +347,7 @@
                 </button>
                 <!-- Navbar Links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="fsize-20 navbar-nav gap-20 ms-auto">
+                    <ul class="fsize-20 navbar-nav gap-20 ms-auto bg-mobile-white ">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
