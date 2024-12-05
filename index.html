@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="asset/images/zalofavicon.png" />
+    <link rel="icon" type="image/png" href="asset/images/zalofavicon.png"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -119,8 +119,28 @@
         /* rounded circl css */
         .image-card {
             position: relative;
-            /* Ensure relative positioning for proper placement of round div */
+           
         }
+
+                    .learn-more-btn {
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
+                transition: color 0.3s ease;
+            }
+
+            .learn-more-btn .arrow {
+                display: inline-block;
+                transition: color 0.3s ease;
+            }
+
+            .learn-more-btn:hover {
+                color: orange;
+            }
+
+            .learn-more-btn:hover .arrow {
+                color: orange;
+            }
 
         .round-div {
             position: absolute;
@@ -280,6 +300,16 @@
             /* -webkit-scrollbar-color: #E96304 #F5DDD2; */
         }
 
+        /* image hover */
+                    .img-fluid {
+                transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effects */
+            }
+
+            .img-fluid:hover {
+                transform: scale(1.05); /* Slight zoom effect */
+                filter: brightness(0.9); /* Darkens the image slightly */
+            }
+
         ::-webkit-scrollbar {
             width: 5px;
             /* Set the width of the scrollbar */
@@ -323,8 +353,10 @@
         }
 
         footer {
-            background-color: #E96304;
+            /* background-color: #E96304; */
+            background-color: #FFCA2C;
             color: white;
+            font-weight: bolder;
             padding: 20px 0;
             text-align: center;
         }
@@ -338,7 +370,7 @@
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="asset/images/zkl.png" alt="Logo" class="img-fluid custom-logo">
+                    <img src="asset/images/zkl.png" alt="Zalo Knitting Ltd" class="img-fluid custom-logo">
                 </a>
                 <!-- Toggler for responsive menu -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -392,7 +424,7 @@
         <div class="container border-bottom-black">
             <div class="row">
                 <div class="col-md-4 image-card">
-                    <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    <img src="https://images.unsplash.com/photo-1655280056654-dda90a3e17de?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Image 1" class="img-fluid" loading="lazy">
                     <div class="mt-3">
                         <div class="row">
@@ -417,7 +449,7 @@
                 </div>
 
                 <div class="col-md-4 mt-5 image-card position-relative">
-                    <img src="https://plus.unsplash.com/premium_photo-1667520524170-f7f44b5b0376?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    <img src="https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Image 2" class="img-fluid" loading="lazy">
                     <!-- Round Div -->
                     <div class="round-div">
@@ -446,7 +478,7 @@
                 </div>
 
                 <div class="col-md-4 image-card">
-                    <img src="https://images.unsplash.com/photo-1502323777036-f29e3972d82f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    <img src="https://images.unsplash.com/photo-1654110509803-4f53e0f9c192?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Image 3" class="img-fluid" loading="lazy">
                     <div class="mt-3">
                         <p class="text-center text-muted">
@@ -475,9 +507,110 @@
 
     </section>
 
+    <section class="responsive-images py-5 bg-white" data-scroll-section>
+
+        <div class="container border-bottom-black">
+            <div class="row">
+                <div class="mt-3">
+                    <div class="row">
+                        <!-- First Section -->
+                        <div class="col-12 col-md-6 mb-2">
+                            <!-- <h5 class="text-center fw-bold">20 +</h5> -->
+                            <h1 class="hero-text fsize-20">Why Our Manufacturing</h1>
+                            <h1> Your Trusted Textile<br>Manufacturer</h1>
+                            <p class="text-muted">
+                                We believe in creating fashion that not only makes you look good<br> but also contributes to a better future.
+                            </p>
+                            <!-- <p class="text-center text-muted fs-6 fs-md-5">
+                                Your Trusted Textile Manufacturer
+                            </p> -->
+                        </div>
+                        <!-- Second Section -->
+                        <!-- <div class="col-12 col-md-6">
+                            <h5 class="text-center fw-bold">5k +</h5>
+                            <p class="text-center text-muted fs-6 fs-md-5">
+                                customers
+                            </p>
+                        </div> -->
+
+                    </div>
+                </div>
+                <div class="col-md-4 image-card">
+                    <img src="https://images.unsplash.com/photo-1619239635762-8132f6dba51c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 1" class="img-fluid" loading="lazy">
+                 
+
+
+                </div>
+
+                <!-- <div class="col-md-4 mt-5 image-card position-relative">
+                    <img src="https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 2" class="img-fluid" loading="lazy">
+                   
+                    <div class="round-div">
+                        <div class="star">★</div>
+                        <div class="circle-text">
+                            <span>E</span>
+                            <span>l</span>
+                            <span>e</span>
+                            <span>g</span>
+                            <span>a</span>
+                            <span>n</span>
+                            <span>c</span>
+                            <span>e</span>
+                            <span>D</span>
+                            <span>e</span>
+                            <span>s</span>
+                            <span>I</span>
+                            <span>G</span>
+                            <span>N</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>G</span>
+                        </div>
+                    </div>
+
+                </div> -->
+
+                <div class="col-md-4 image-card mt-5">
+                    <img src="https://plus.unsplash.com/premium_photo-1723672935578-81c0f7f60c2e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="Image 3" class="img-fluid" loading="lazy">
+                    <div class="mt-3">
+                      <p class="text-center text-muted">
+                        Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
+                        latest trends, we’ve got you covered.
+                      </p>
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn learn-more-btn">
+                          Learn More <span class="arrow border-bottom-black">→</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <!-- Left Section: Heading -->
+                <div class="col-12 col-md-8">
+                    <h1 class="text-start fw-bold mb-3">Get in Touch with Our Textile Mastery</h1>
+                </div>
+                <!-- Right Section: Button -->
+                <div class="col-12 col-md-4 text-md-end text-center">
+                    <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold">Get Services</a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Knitting Ltd. All Rights Reserved.</p>
+        <p>&copy; 2024 Zalo Knitting Ltd. All Rights Reserved.</p>
     </footer>
 
     <!-- Locomotive Smooth Scroll JS -->
