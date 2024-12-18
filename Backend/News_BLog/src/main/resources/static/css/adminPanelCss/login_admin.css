@@ -1,0 +1,66 @@
+.color-changer{
+    color: darkgray;
+}
+
+.form-body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.form-body::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: -19px;
+    /* width: calc(100% + 10px);
+    height: calc(100% + 10px); */
+    width: 102%;
+    height: 104%;
+    background-image: url('../../assets/images/adminImages/loginPage/background_login.webp');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px; /* Adjust according to your border-radius */
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0); /* Transparent box-shadow */
+}
+
+.login-container {
+        /*background-color: rgba(255, 255, 255, 0.8);*/
+        background-color: #0f0f0f;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        opacity: 90%;
+}
+
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px; /* Adjust as needed */
+}
+
+.form-control {
+    border: 1px solid black; /* Border style */
+    border-radius: 5px; /* Optional: add border radius for rounded corners */
+    padding: 8px; /* Optional: adjust padding as needed */
+    width: 100%; /* Optional: adjust width as needed */
+    box-sizing: border-box; /* Optional: ensure padding and border are included in the width */
+}
+
+label{
+    font-weight: bold;
+}
+
+button{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" th:href="@{/assets/images/adminImages/dg_logo.png}" type="image/ico">
+
+    <title>Desher Gorjon Admin Panel</title>
+
+    <!-- Bootstrap -->
+    <link th:href="@{/boostrapVendor/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/boostrapVendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/boostrapVendor/nprogress/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/boostrapVendor/iCheck/skins/flat/green.css}" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/boostrapVendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/boostrapVendor/jqvmap/dist/jqvmap.min.css}" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link th:href="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.css}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/adminPanelCss/admin_custom.min.css}" rel="stylesheet">
+</head>
+<body>
+<header th:fragment="sidemenu">
+    <!-- sidebar menu -->
+    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+        <div class="menu_section">
+            <ul class="nav side-menu">
+                <li><a th:href="@{/auth/dashboard}"><img th:src="@{/assets/images/adminImages/dashboard.png}" alt=""> Dashboard</a></li>
+                <li><a><img th:src="@{/assets/images/adminImages/roles.png}" alt=""> Permissions<span
+                        class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a th:href="@{/auth/permissions}">All Permissions</a></li>
+                        <li><a th:href="@{/auth/permissions/add}">Add New Permission</a></li>
+                        <li><a>Sub-Category<span
+                                class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a th:href="@{/auth/permissionsSubCategory/Role}">All Sub-Categories</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <div th:each="SideMenuDTO, status: ${SideMenuDTOList}">
+                    <li><a><img th:src="@{/assets/images/adminImages/roles.png}" alt=""><span
+                            class="fa fa-chevron-down" th:text="${SideMenuDTO.permissionName}"></span></a>
+                        <ul th:if="${SideMenuDTO.hasSubCategory == 1}" class="nav child_menu">
+                            <div th:each="subCategories, status: ${SideMenuDTO.subCategoryList}">
+                                <li><a th:href="@{${subCategories.subCategoryURL}}"><span th:text="${subCategories.subCategoryName}"></span></a></li>
+                            </div>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- /sidebar menu -->
+</header>
+
+<script th:src="@{/js/adminPanelJs/alartsInAdmin.js}"></script>
+</body>
+</html>
+
+
+<!--<li th:if="${PermissionList.contains('Role')}"><a><img th:src="@{/assets/images/adminImages/roles.png}" alt=""> Roles<span-->
+
+
+<!--                <li><a><img th:src="@{/assets/images/adminImages/merchant.png}" alt=""> Merchant & Service <span-->
+<!--                        class="fa fa-chevron-down"></span></a>-->
+<!--                    <ul class="nav child_menu">-->
+<!--                        <li><a>Merchant<span-->
+<!--                                class="fa fa-chevron-down"></span></a>-->
+<!--                            <ul class="nav child_menu">-->
+<!--                                <li><a th:href="@{/auth/merchants}">Merchants</a></li>-->
+<!--                                <li><a th:href="@{/auth/merchants/add}">Add New Merchant</a></li>-->
+<!--                                <li><a th:href="@{/auth/merchantType-list}">Merchant wise Category</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                        <li><a>Service<span-->
+<!--                                class="fa fa-chevron-down"></span></a>-->
+<!--                            <ul class="nav child_menu">-->
+<!--                                <li><a th:href="@{/auth/serviceType-list/add}">Add New Service</a></li>-->
+<!--                                <li><a th:href="@{/auth/serviceType-list}">Service wise Category</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->

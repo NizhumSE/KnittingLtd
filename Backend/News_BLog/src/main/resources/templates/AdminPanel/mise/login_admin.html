@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel Login</title>
+    <!-- Bootstrap -->
+    <link th:href="@{/boostrapVendor/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/boostrapVendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/boostrapVendor/nprogress/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/boostrapVendor/iCheck/skins/flat/green.css}" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/boostrapVendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/boostrapVendor/jqvmap/dist/jqvmap.min.css}" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link th:href="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.css}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/adminPanelCss/login_admin.css}" rel="stylesheet">
+
+</head>
+<body class="form-body">
+    <div class="login-container">
+        <h2 class="color-changer">Admin Panel Login</h2>
+        <form action="#" th:action="@{/auth/loginUser}" th:object="${userRequestDTO}" method="post">
+            <p class="alert" th:if="${param.loginError}">Invalid email or password</p>
+            <div class="form-group">
+                <input type="email" class="form-control" id="username" name="username" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+    </div>
+
+<!-- jQuery -->
+<script th:src="@{/boostrapVendor/jquery/dist/jquery.min.js}"></script>
+<!-- Bootstrap -->
+<script th:src="@{/boostrapVendor/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+<!-- FastClick -->
+<script th:src="@{/boostrapVendor/fastclick/lib/fastclick.js}"></script>
+<!-- NProgress -->
+<script th:src="@{/boostrapVendor/nprogress/nprogress.js}"></script>
+<!-- Chart.js -->
+<script th:src="@{/boostrapVendor/Chart.js/dist/Chart.min.js}"></script>
+<!-- gauge.js -->
+<script th:src="@{/boostrapVendor/gauge.js/dist/gauge.min.js}"></script>
+<!-- bootstrap-progressbar -->
+<script th:src="@{/boostrapVendor/bootstrap-progressbar/bootstrap-progressbar.min.js}"></script>
+<!-- iCheck -->
+<script th:src="@{/boostrapVendor/iCheck/icheck.min.js}"></script>
+<!-- Skycons -->
+<script th:src="@{/boostrapVendor/skycons/skycons.js}"></script>
+<!-- Flot -->
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.pie.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.time.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.stack.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.resize.js}"></script>
+<!-- Flot plugins -->
+<script th:src="@{/boostrapVendor/flot.orderbars/js/jquery.flot.orderBars.js}"></script>
+<script th:src="@{/boostrapVendor/flot-spline/js/jquery.flot.spline.min.js}"></script>
+<script th:src="@{/boostrapVendor/flot.curvedlines/curvedLines.js}"></script>
+<!-- DateJS -->
+<script th:src="@{/boostrapVendor/DateJS/build/date.js}"></script>
+<!-- JQVMap -->
+<script th:src="@{/boostrapVendor/jqvmap/dist/jquery.vmap.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/dist/maps/jquery.vmap.world.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/examples/js/jquery.vmap.sampledata.js}"></script>
+<!-- bootstrap-daterangepicker -->
+<script th:src="@{/boostrapVendor/moment/min/moment.min.js}"></script>
+<script th:src="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.js}"></script>
+
+</body>
+</html>

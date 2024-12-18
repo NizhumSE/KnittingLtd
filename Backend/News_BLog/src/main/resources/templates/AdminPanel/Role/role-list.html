@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" th:href="@{/assets/images/adminImages/dg_logo.png}" type="image/ico">
+
+    <title>Desher Gorjon Admin Panel</title>
+
+
+    <!-- Bootstrap -->
+    <link th:href="@{/boostrapVendor/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/boostrapVendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/boostrapVendor/nprogress/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/boostrapVendor/iCheck/skins/flat/green.css}" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/boostrapVendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/boostrapVendor/jqvmap/dist/jqvmap.min.css}" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link th:href="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.css}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/adminPanelCss/style.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/admin_custom.min.css}" rel="stylesheet">
+    <style>
+        th, td {
+            padding: 5px;
+            height: auto;
+        }
+        /* dropdowndesign */
+        /* Dropdown Button */
+        .reject-button {
+            background-color: #d9512c;
+            color: white;
+            width: 70px;
+        }
+        .deactive-button {
+            background-color: red;
+            color: white;
+            width: 70px;
+        }
+        .active-button {
+            background-color: green;
+            color: white;
+            width: 70px;
+        }
+
+        .dropbtn {
+            height: 27px;
+            padding: 4px;
+
+            border-radius: 20px;
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            padding-left: 2px;
+            min-width: 50px;
+            height: fit-content;
+
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 2px;
+            font-size: 12px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .btn-darks{
+            color: black;
+            background-color: transparent;
+            border-color: none;
+            font-size: 14px;
+        }
+        .btn-dangers{
+            color: black;
+            background-color: transparent;
+            border-color: none;
+            font-size: 14px;
+        }
+        .btn-warn {
+            color: black;
+            background-color: transparent;
+            border-color: none;
+            font-size: 14px;
+        }
+        .btn-warn:hover{
+            background-color: none;
+        }
+        .reject-button{
+            background-color: #d9512c;
+            color: white;
+            width: 63px;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {display:block;}
+    </style>
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title">
+                    <a th:href="@{/index}" class="site_title"><img th:src="@{/assets/images/adminImages/dg_logo.png}" alt="image" style="height: 62px;"> </a>
+
+                </div>
+                <div class="clearfix"></div>
+
+                <!-- sidebar menu -->
+                <header th:replace="~{AdminPanel/fragments/sidemenu :: sidemenu}">
+
+                </header>
+                <!-- sidebar menu ends -->
+                <!-- /menu footer buttons -->
+
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <header th:replace="~{AdminPanel/fragments/header :: header}">
+
+        </header>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="body">
+            <!-- top tiles -->
+            <div class="row d-flex">
+                <!--navbar start-->
+                <div class="navbar">
+                    <span class="navbar-text">Role Permission</span>
+                    <div class="button-group-container mar-lsm">
+                        <a th:href="@{/auth/role/add}" class="merchant-button pdf-button" type="button">Add New Role</a>
+                    </div>
+                </div>
+                <div class="navbar">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><img th:src="@{/assets/images/adminImages/search.png}" alt="Profile Image"
+                                                   width="20"
+                                                   height="20"></button>
+                    </div>
+                </div>
+                <!--nav close-->
+            </div>
+            <!-- /top tiles -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                    <div class="dashboard_graph">
+
+                        <div class="row x_title">
+                            <div class="col-md-6 d-flex">
+                                <a href="javascript:;"
+                                   class="action user-profile dropdown-toggle margin-rsm rounded-border"
+                                   aria-haspopup="true" id="navbarDropdown5" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    10
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                     aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="javascript:;">1</a>
+                                    <a class="dropdown-item" href="javascript:;">2</a>
+                                    <a class="dropdown-item" href="javascript:;">3</a>
+                                    <a class="dropdown-item" href="javascript:;">4</a>
+                                    <a class="dropdown-item" href="javascript:;">5</a>
+                                    <a class="dropdown-item" href="javascript:;">5
+                                    </a>
+                                    <!--a-- class="dropdown-item" href="javascript:;">3</a-->
+                                    <!--a- class="dropdown-item" href="login.html"><i
+                                            class="fa fa-sign-out pull-right"></i>
+                                        Log Out</a-->
+                                </div>
+                                <p class="text margin-sm pt-2">Records Per Page</p>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="button-group-container">
+                                    <button class="groups-button pdf-button" type="button">PDF</button>
+                                    <button class="groups-button csv-button" type="button">CSV</button>
+                                    <button class="groups-button print-button" type="button">Print</button>
+                                    <button class="groups-button delete-button" type="button">Delete</button>
+                                    <div class="dropdown">
+                                        <button class="groups-button-lg column-visibility-button dropdown-button"
+                                                type="button">
+                                            Column Visibility
+                                            <span class="dropdown-chevron">&#9662;</span>
+                                            <!-- Unicode for a chevron down icon -->
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <a href="#">Column 1</a>
+                                            <a href="#">Column 2</a>
+                                            <a href="#">Column 3</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <style>
+                            .nav-table-menu {
+                                list-style-type: none;
+                                margin: 0;
+                                padding: 0;
+                                overflow: hidden;
+                                justify-content: space-between;
+                            }
+
+                            .nav-table-item {
+                                float: left;
+                                margin-right: 10px;
+                            }
+
+                            l.nav-table-item a {
+                                display: block;
+                                color: white;
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                            }
+
+                            /* Change the link color to #111 (black) on hover */
+                            l.nav-table-item a:hover {
+                                background-color: #111;
+                            }
+
+                            .active {
+                                border-bottom: 1px solid #8CA3B3;
+                            }
+                        </style>
+                        <style type="text/css">
+                            .fixed-table-wrap {
+                                display: block;
+                                width: 100%;
+
+                                /* overflow-y: scroll; */
+                                /* height: calc(100vh); */
+
+                            }
+
+
+
+                            .fixed-table-wrap table th,
+                            .fixed-table-wrap table td {
+                                padding: 10px;
+                                /* border: 1px solid #c3c3c3; */
+                            }
+
+                            .fixed-table-wrap table th {
+                                position: sticky;
+                                position: -webkit-sticky;
+                                top: 0px;
+                                z-index: 99;
+                                border-right: 1px solid #798ba9 !important;
+                                background-color: #86A1AF;
+                            }
+
+                            .fixed-table-wrap table th::after {
+                                content: "";
+                                display: inline-block;
+                                width: 1px;
+                                background-color: #aba8a8;
+                                position: absolute;
+                                right: -1px;
+                                height: 40px;
+                                top: 0px;
+                            }
+
+                            /* .table .table-lg {} */
+
+                            /*new table update design*/
+                            table>tbody {
+                                display: block;
+                                max-height: 550px;
+                                overflow-y: scroll;
+                            }
+
+                            th,
+                            td {
+
+                                padding: 8px;
+                                text-align: center;
+                                /* border-bottom: 0.2px solid #707070; */
+                            }
+
+                            table>thead,
+                            tbody tr {
+                                display: table;
+                                width: 100%;
+                                table-layout: fixed;
+                            }
+
+                            .fixed-table-wrap {
+                                border-radius: 20px;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+                            }
+
+                            /* Apply responsive CSS for small screens */
+                            /* @media (max-width: 600px) {
+                                table {
+                                    border: 0;
+                                }
+
+                                th,
+                                td {
+                                    display: block;
+                                    width: 100%;
+
+                                }
+
+                                thead tr {
+                                    overflow-x: scroll;
+                                }
+
+                                th {
+                                    text-align: center;
+
+                                }
+
+                                tr {
+                                    display: flex;
+                                }
+
+                                td {
+                                    display: flex;
+                                }
+                            } */
+                        </style>
+                        <!--table content class=col-md-9 col-sm-9-->
+                        <div class="fixed-table-wrap">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th scope="col">Serial ID</th>
+                                    <th scope="col">Role Name</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- First row with a checkbox in the first cell -->
+                                <tr th:each="role, status: ${roles}">
+                                    <td th:text="${status.index + 1}"></td>
+                                    <td th:text="${role}"></td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="dropbtn">Action</button>
+                                            <div id="myDropdown" class="dropdown-content">
+                                                <a th:unless="${role == 'ADMIN' || role == 'USER' || role == 'MERCHANT'}"
+                                                   th:href="@{/auth/role/update/{name}(name=${role})}" type="button" class="btn-dark" >Edit</a>
+                                                <a th:unless="${role == 'ADMIN' || role == 'USER' || role == 'MERCHANT'}"
+                                                   th:href="@{/auth/role/delete/{name}(name=${role})}" type="button" class="btn-danger" >Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--table finished-->
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-4 col-sm-4">
+                    <div class="x_panel tile fixed_height_60">
+                        <div class="x_title">
+                            <p>Showing 01-09</p>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--next and previous button-->
+
+                <div class="col-md-4 col-sm-4 margin-sml">
+                    <div class="x_title nav navbar-right panel_toolbox">
+                        <div class="nav navbar-right panel_toolbox">
+                            <a href="#" class="previous">&#8249;</a>
+                            <a href="#" class="previous-center">1</a>
+                            <a href="#" class="next">&#8250;</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script th:src="@{/boostrapVendor/jquery/dist/jquery.min.js}"></script>
+<!-- Bootstrap -->
+<script th:src="@{/boostrapVendor/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+<!-- FastClick -->
+<script th:src="@{/boostrapVendor/fastclick/lib/fastclick.js}"></script>
+<!-- NProgress -->
+<script th:src="@{/boostrapVendor/nprogress/nprogress.js}"></script>
+<!-- Chart.js -->
+<script th:src="@{/boostrapVendor/Chart.js/dist/Chart.min.js}"></script>
+<!-- gauge.js -->
+<script th:src="@{/boostrapVendor/gauge.js/dist/gauge.min.js}"></script>
+<!-- bootstrap-progressbar -->
+<script th:src="@{/boostrapVendor/bootstrap-progressbar/bootstrap-progressbar.min.js}"></script>
+<!-- iCheck -->
+<script th:src="@{/boostrapVendor/iCheck/icheck.min.js}"></script>
+<!-- Skycons -->
+<script th:src="@{/boostrapVendor/skycons/skycons.js}"></script>
+<!-- Flot -->
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.pie.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.time.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.stack.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.resize.js}"></script>
+<!-- Flot plugins -->
+<script th:src="@{/boostrapVendor/flot.orderbars/js/jquery.flot.orderBars.js}"></script>
+<script th:src="@{/boostrapVendor/flot-spline/js/jquery.flot.spline.min.js}"></script>
+<script th:src="@{/boostrapVendor/flot.curvedlines/curvedLines.js}"></script>
+<!-- DateJS -->
+<script th:src="@{/boostrapVendor/DateJS/build/date.js}"></script>
+<!-- JQVMap -->
+<script th:src="@{/boostrapVendor/jqvmap/dist/jquery.vmap.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/dist/maps/jquery.vmap.world.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/examples/js/jquery.vmap.sampledata.js}"></script>
+<!-- bootstrap-daterangepicker -->
+<script th:src="@{/boostrapVendor/moment/min/moment.min.js}"></script>
+<script th:src="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.js}"></script>
+
+<!-- Custom Theme Scripts -->
+<script th:src="@{/js/adminPanelJs/custom.min.js}"></script>
+
+<script th:src="@{/js/adminPanelJs/alartsInAdmin.js}"></script>
+</body>
+
+</html>

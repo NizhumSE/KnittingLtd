@@ -1,0 +1,348 @@
+body {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.fixed-table-wrap {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    /* overflow-y: scroll; */
+    /* height: calc(100vh); */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.fixed-table-wrap table {
+    border-collapse: collapse;
+}
+
+.fixed-table-wrap table th,
+.fixed-table-wrap table td {
+    padding: 10px;
+    /* border: 1px solid #c3c3c3; */
+}
+
+.fixed-table-wrap table th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 99;
+    border-right: 1px solid #798ba9 !important;
+    background-color: #86A1AF;
+}
+
+.fixed-table-wrap table th::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    background-color: #aba8a8;
+    position: absolute;
+    right: -1px;
+    height: 40px;
+    top: 0px;
+}
+
+/* .table .table-lg {} */
+
+/*new table update design*/
+table>tbody {
+    display: block;
+    max-height: 550px;
+    overflow-y: scroll;
+}
+
+th,
+td {
+
+    padding: 8px;
+    text-align: center;
+    /* border-bottom: 0.2px solid #707070; */
+}
+
+table>thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.fixed-table-wrap {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+th, td {
+    padding: 5px;
+    height: auto;
+}
+
+/* dropdowndesign */
+/* Dropdown Button */
+.reject-button {
+    background-color: #d9512c;
+    color: white;
+    width: 70px;
+}
+
+.deactive-button {
+    background-color: red;
+    color: white;
+    width: 70px;
+}
+
+.active-button {
+    background-color: green;
+    color: white;
+    width: 70px;
+}
+
+.dropbtn {
+    height: 27px;
+    padding: 4px;
+
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding-left: 2px;
+    min-width: 50px;
+    height: fit-content;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 2px;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.btn-darks {
+    color: black;
+    background-color: transparent;
+    border-color: none;
+    font-size: 14px;
+}
+
+.btn-dangers {
+    color: black;
+    background-color: transparent;
+    border-color: none;
+    font-size: 14px;
+}
+
+.btn-warn {
+    color: black;
+    background-color: transparent;
+    border-color: none;
+    font-size: 14px;
+}
+
+.btn-warn:hover {
+    background-color: none;
+}
+
+.reject-button {
+    background-color: #d9512c;
+    color: white;
+    width: 63px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+/*dropdown option button css*/
+
+.multiselect {
+    width: 200px;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label {
+    display: block;
+}
+
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+
+#checkboxes {
+    padding-top: 10px;
+    position: absolute;
+    z-index: 555;
+    background-color: ghostwhite;
+    width: 200px;
+}
+
+.nav-table-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.nav-table-item {
+    float: left;
+    margin-right: 10px;
+}
+
+l.nav-table-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+l.nav-table-item a:hover {
+    background-color: #111;
+}
+
+.active {
+    border-bottom: 1px solid #8CA3B3;
+}
+.fixed-table-wrap {
+    display: block;
+    width: 100%;
+
+    /* overflow-y: scroll; */
+    /* height: calc(100vh); */
+
+}
+
+
+.fixed-table-wrap table th,
+.fixed-table-wrap table td {
+    padding: 10px;
+    /* border: 1px solid #c3c3c3; */
+}
+
+.fixed-table-wrap table th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 99;
+    border-right: 1px solid #798ba9 !important;
+    background-color: #86A1AF;
+}
+
+.fixed-table-wrap table th::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    background-color: #aba8a8;
+    position: absolute;
+    right: -1px;
+    height: 40px;
+    top: 0px;
+}
+
+/* .table .table-lg {} */
+
+/*new table update design*/
+table > tbody {
+    display: block;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+th,
+td {
+
+    padding: 8px;
+    text-align: center;
+    /* border-bottom: 0.2px solid #707070; */
+}
+
+table > thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.fixed-table-wrap {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/*New table style with pagination*/
+.pagination {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.pagination li {
+    /*margin-right: 10px;*/
+    cursor: pointer;
+}
+
+#search {
+    /*border: 3px solid red;*/
+}
+/*.merchant-button:hover {*/
+/*    width: 154px;*/
+/*    padding: 5px;*/
+/*    height: 39px;*/
+/*    border-radius: 20px;*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    cursor: pointer;*/
+/*}*/

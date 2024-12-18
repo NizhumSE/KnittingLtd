@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zalo Knitting Ltd Admin Panel</title>
+
+    <!-- Bootstrap -->
+    <link th:href="@{/boostrapVendor/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/boostrapVendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/boostrapVendor/nprogress/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/boostrapVendor/iCheck/skins/flat/green.css}" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/boostrapVendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/boostrapVendor/jqvmap/dist/jqvmap.min.css}" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link th:href="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.css}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/adminPanelCss/style.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/admin_custom.min.css}" rel="stylesheet">
+</head>
+<body>
+<header  th:fragment="header" id="successMassage">
+
+    <!-- top navigation -->
+    <div class="top_nav">
+        <div class="nav_menu">
+            <div class="nav toggle">
+                <a id="menu_toggle"> <img th:src="@{/assets/images/adminImages/Group 6843.png}" alt="image"></a>
+            </div>
+
+            <div class="rounded-btn-group">
+                <button type="button" class="rounded-btn" id="today-btn" data-value="today">Today</button>
+                <button type="button" class="rounded-btn" id="last-7-days-btn" data-value="last-7-days">Last 7
+                    Days</button>
+                <button type="button" class="rounded-btn" id="this-month-btn" data-value="this-month">This
+                    Month</button>
+                <button type="button" class="rounded-btn" id="this-year-btn" data-value="this-year">This
+                    Year</button>
+            </div>
+
+            <!--nav Start-->
+            <nav class="nav navbar-nav">
+                <!--nav button start-->
+                <ul class=" navbar-right">
+                    <li class="nav-item dropdown open">
+                        <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
+                           id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                            <img th:src="@{/assets/images/adminImages/admin_logo.webp}" alt="">Super Admin
+                        </a>
+                        <div class="dropdown-menu dropdown-usermenu pull-right"
+                             aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" th:href="@{/user-profile}"> Profile</a>
+                            <a class="dropdown-item" href="javascript:;">
+                                <span class="badge bg-red pull-right">50%</span>
+                                <span>Settings</span>
+                            </a>
+                            <a class="dropdown-item" href="javascript:;">Help</a>
+                            <a class="dropdown-item" th:href="@{/auth/logoutUser}"><i class="fa fa-sign-out pull-right"></i>
+                                Log Out</a>
+                        </div>
+                    </li>
+
+                    <!--nav Image button before profile button-->
+
+                    <!--nav Image button before profile button 1-->
+
+                    <li role="presentation" class="nav-item dropdown open">
+                        <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown2"
+                           data-toggle="dropdown" aria-expanded="false">
+                            <img th:src="@{/assets/images/adminImages/help.png}" alt="">help
+                            <!--span-- class="badge bg-green">6</span-->
+                        </a>
+                        <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                            aria-labelledby="navbarDropdown2">
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="text-center">
+                                    <a class="dropdown-item">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--nav Image button before profile button 1 close-->
+
+
+                    <li role="presentation" class="nav-item dropdown open me-2">
+                        <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown3"
+                           data-toggle="dropdown" aria-expanded="false">
+                            <img th:src="@{/assets/images/adminImages/settings.png}" alt="">
+                            <span class="badge bg-green">4</span>
+                        </a>
+                        <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                            aria-labelledby="navbarDropdown3">
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="text-center">
+                                    <a class="dropdown-item">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--nav Image button before profile button 2 close-->
+
+
+                    <li role="presentation" class="nav-item dropdown open">
+                        <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown4"
+                           data-toggle="dropdown" aria-expanded="false">
+                            <img th:src="@{/assets/images/adminImages/bell.png}" alt="">
+                            <span class="badge bg-green">8</span>
+                        </a>
+                        <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                            aria-labelledby="navbarDropdown4">
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img th:src="@{/assets/images/adminImages/img.jpg}" alt="Profile Image"></span>
+                                    <span>
+                                                <span>John Smith</span>
+                                                <span class="time">3 mins ago</span>
+                                            </span>
+                                    <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
+                                            </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="text-center">
+                                    <a class="dropdown-item">
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--nav Image button before profile button 3 close-->
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /top navigation -->
+</header>
+<script th:src="@{/js/adminPanelJs/alartsInAdmin.js}"></script>
+</body>
+</html>

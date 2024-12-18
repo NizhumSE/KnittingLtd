@@ -1,0 +1,247 @@
+.space_text {
+    justify-content: space-between;
+    width: 100%
+}
+
+.dashboard-box {
+    width: 130px;
+    /* Adjust width as needed for responsiveness */
+    height: 50%;
+    /* Auto height to maintain aspect ratio */
+    min-width: 200px;
+    background: linear-gradient(to bottom, rgba(172, 219, 255, 0.2), rgba(202, 234, 255, 0.2)), url('../images/admin-doctor.png');
+    /* Replace 'path/to/your-image.jpg' with the actual path to your image */
+    background-size: cover;
+    /* Adjust as needed to control the image size */
+    background-repeat: no-repeat;
+    background-color: #ACDBFF;
+    background-position: bottom;
+    /*
+    /* Fallback color for browsers that don't support gradients or images */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* Increased border-radius for a rounded appearance */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+    /* Add a smooth transition for the transform property */
+}
+
+.dashboard-box:hover {
+    transform: translateY(-5px);
+    /* Move the box up by 5px when hovered over */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    /* Change the box shadow when hovered over */
+}
+
+/*hospital box design */
+.hospital {
+
+    /* Auto height to maintain aspect ratio */
+    min-width: 200px;
+    background: linear-gradient(to bottom, rgba(172, 194, 255, 0.2), rgba(172, 194, 255, 0.2)), url('../images/hospital-admin.png');
+    /* Replace 'path/to/your-image.jpg' with the actual path to your image */
+    background-size: cover;
+    /* Adjust as needed to control the image size */
+    background-repeat: no-repeat;
+    background-color: #ACC2FF;
+    background-position: bottom;
+    /*
+    /* Fallback color for browsers that don't support gradients or images */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* Increased border-radius for a rounded appearance */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+    /* Add a smooth transition for the transform property */
+}
+
+/*diagnostics design*/
+.diagnostics {
+
+    /* Auto height to maintain aspect ratio */
+    min-width: 200px;
+    background: linear-gradient(to bottom, rgba(215, 249, 254, 0.2), rgba(174, 230, 228, 0.2)), url('../images/diagnostics.png');
+    /* Replace 'path/to/your-image.jpg' with the actual path to your image */
+    background-size: cover;
+    /* Adjust as needed to control the image size */
+    background-repeat: no-repeat;
+    background-color: #D7F9FE;
+    background-position: bottom;
+    /*
+    /* Fallback color for browsers that don't support gradients or images */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* Increased border-radius for a rounded appearance */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+    /* Add a smooth transition for the transform property */
+}
+
+/*diagnostics design*/
+.pharmacy {
+
+    /* Auto height to maintain aspect ratio */
+    min-width: 200px;
+    background: linear-gradient(to bottom, rgba(215, 249, 254, 0.2), rgba(174, 230, 228, 0.2)), url('../images/diagnostics.png');
+    /* Replace 'path/to/your-image.jpg' with the actual path to your image */
+    background-size: cover;
+    /* Adjust as needed to control the image size */
+    background-repeat: no-repeat;
+    background-color: #D7FEE7;
+    background-position: bottom;
+    /*
+    /* Fallback color for browsers that don't support gradients or images */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* Increased border-radius for a rounded appearance */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+    /* Add a smooth transition for the transform property */
+}
+
+
+
+
+@media (max-width: 768px) {
+    .dashboard-box {
+        width: 100%;
+        /* Adjust for smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .dashboard-box-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .dashboard-box {
+        flex: 0 0 calc(20% - 10px);
+        /* 33.33% for 3 boxes with some spacing */
+        margin-right: 10px;
+        /* Adjust the margin as needed for spacing */
+        box-sizing: border-box;
+    }
+
+    /* To remove the margin from the last box in the row */
+    .dashboard-box:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.dashboard-box-container {
+    width: 100%;
+    display: flex;
+}
+
+.dashboard-box img {
+    width: 18px;
+    height: 16px;
+    margin-right: 5px;
+    object-fit: cover;
+    font-size: 20px;
+}
+
+.dashboard-box p {
+    margin-top: 10px;
+    color: #013261;
+}
+
+.bold-dashboard {
+    font-size: 30px;
+    color: #013261;
+    font-weight: bold;
+
+}
+
+span {
+    color: #013666 !important;
+
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.paragraph-percentage {
+    color: #013666 !important;
+    font-size: 10px;
+    margin-left: 5px;
+
+
+}
+
+.percentage {
+    color: #4A8B00 !important;
+    font-size: 10px;
+    text-align: center;
+}
+
+.Business {
+    color: #AFAFAF;
+    font-size: 30px;
+}
+
+.stackedArea {
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+
+/* Adjust the values as needed */
+}
+
+.hello {
+    width: 700px;
+    align-items: flex-end;
+    margin-left: 10px;
+
+}
+
+.hello-table {
+    height: 360px;
+    padding-top: 45px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* Add a vertical scrollbar */
+    scrollbar-width: thin;
+    /* Set the width of the scrollbar (can be 'thin', 'auto', or 'none') */
+    scrollbar-color: rgba(75, 192, 192, 1) rgba(219, 238, 225, 0.5);
+    /* Set the color of the scrollbar (track color and thumb color) */
+}
+
+
+.container-postion {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.position {
+    width: 100%;
+    justify-content: flex-end;
+    /* Use 'flex-end' to justify content to the end */
+    align-items: flex-end;
+    /* Use 'flex-end' to align items to the end */
+    transform: translateX(calc(100% - 100px));
+    /* Adjust the value as per your requirement */
+    margin-top: 5px;
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" th:href="@{/assets/images/adminImages/dg_logo.png}" type="image/ico">
+
+
+    <title>Desher Gorjon Admin Panel</title>
+
+    <!-- Bootstrap -->
+    <link th:href="@{/boostrapVendor/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/boostrapVendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/boostrapVendor/nprogress/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/boostrapVendor/iCheck/skins/flat/green.css}" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/boostrapVendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/boostrapVendor/jqvmap/dist/jqvmap.min.css}" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link th:href="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.css}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/adminPanelCss/admin_custom.min.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/style.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/dropdown.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/toggleButton.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/table.css}" rel="stylesheet">
+    <style>
+        .Merchant {
+            width: 22%;
+        }
+
+        .font-m {
+            padding-left: 20px;
+        }
+
+        form {
+            font-size: 14px;
+            /*width: 300px;*/
+            /*margin: auto;*/
+        }
+
+        label {
+            /*display: block;*/
+            /*margin-bottom: 5px;*/
+        }
+
+        select {
+            width: 100%;
+            height: 40px;
+            border-radius: 16px;
+            border: 1px solid #1ABB9C;
+            color: #1ABB9C;
+            /*padding: 8px;*/
+            /*margin-bottom: 10px;*/
+        }
+    </style>
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title">
+                    <a th:href="@{/index}" class="site_title"><img th:src="@{/assets/images/adminImages/dg_logo.png}"
+                                                                   alt="image" style="height: 62px;"> </a>
+                </div>
+                <div class="clearfix"></div>
+
+                <!-- sidebar menu -->
+                <header th:replace="~{AdminPanel/fragments/sidemenu :: sidemenu}">
+
+                </header>
+                <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <header th:replace="~{AdminPanel/fragments/header :: header}">
+
+        </header>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="body">
+            <!-- top tiles -->
+            <div class="row d-flex">
+                <!--navbar start-->
+                <div class="navbar">
+                    <span class="font-l">Add New Permission-Subcategory</span>
+                </div>
+                <div class="navbar d-flex">
+
+                    <form id="merchantForm" method="get">
+                        <!--                        <select id="selectOption1" name="selectOption1" th:field="*{merchantTypeDTO}">-->
+                        <select id="selectOption1" name="selectOption1">
+                            <option th:text="${selectedPermissionName}"></option>
+                            <option th:each="permissoinName : ${permissionNameListDTO}"
+                                    th:value="${permissoinName}"
+                                    th:text="${permissoinName}"></option>
+                            <!--                             Add more options as needed -->
+                        </select>
+
+                        <!--                        <input type="submit" value="Submit">-->
+                    </form>
+                </div>
+                <!--nav close-->
+            </div>
+            <!-- /top tiles -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                    <div class="dashboard_graph">
+                        <!--table content class=col-md-9 col-sm-9-->
+                        <div class="row x_title height-700">
+                            <!--Right search buttons-->
+                            <div class="box-border">
+                                <form action="#"
+                                      th:action="@{/auth/permissionsSubCategory/add/{permissionName}(permissionName = ${selectedPermissionName})}"
+                                      method="post"
+                                      th:object="${permissionSubCategoryDTO}">
+                                    <div class="x_panel tile fixed_height_420 overflow_hidden" style="display: flex;">
+                                        <div class="Merchant">
+                                            <p class="font-m">SubCategory Name:*</p>
+                                            <div class="title">
+                                                <div class="navbar pt-4">
+                                                    <div class="search-bar-xsm">
+                                                        <input type="text" th:field="*{subCategoryName}"
+                                                               placeholder="Enter subcategory name" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="margin-sm title d-flex mt-4 pt-3">
+                                                <div class="button-group-container" style="margin-left: 15px;">
+                                                    <button class="merchant-button pdf-button" type="submit">ADD
+                                                    </button>
+                                                </div>
+
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div class="Merchant">
+                                            <p class="font-m">SubCategory URL:*</p>
+                                            <div class="title">
+                                                <div class="navbar pt-4">
+                                                    <div class="search-bar-xsm">
+                                                        <input th:field="*{subCategoryURL}" type="text"
+                                                               placeholder="Enter URL" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--started rol navbar here--!-->
+            <div class="row" style="display: block; ">
+                <!-- top tiles -->
+                <div class="row d-flex " style="width: 100%; display: flex;">
+                    <!--navbar start-->
+                    <div class="navbar">
+                        <span class="navbar-text" th:text="${selectedPermissionName + ' SubCategory List'}"></span>
+                    </div>
+                    <div class="navbar">
+                        <div class="search-bar" style="width: 500px; position: relative;">
+                            <input type="text" id="search" placeholder="Search">
+                            <button type="submit"><img th:src="@{/assets/images/adminImages/search.png}"
+                                                       alt="Profile Image"
+                                                       width="20"
+                                                       height="20"></button>
+                        </div>
+                    </div>
+                    <div class="navbar">
+                        <div class="dropdown pt-1">
+                            <label>
+                                <select class="groups-button-lg column-visibility-button dropdown-button"
+                                        id="searchFilter"
+                                        onchange="searchFilterOnChangeValue()">
+                                    <option>Search Filter</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <!--nav close-->
+                </div>
+                <!-- /top tiles -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="dashboard_graph">
+
+                            <div class="row x_title">
+                                <div class="col-md-6 d-flex">
+                                    <select class="action user-profile dropdown-toggle margin-rsm rounded-border"
+                                            aria-haspopup="true" id="navbarDropdown5"
+                                            aria-expanded="false" onchange="rowValueChange()">
+                                        <option value="5" selected>5</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                    <p class="text margin-sm pt-2">Records Per Page</p>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="button-group-container">
+                                        <button class="groups-button pdf-button" type="button">PDF</button>
+                                        <button class="groups-button csv-button" type="button">CSV</button>
+                                        <button class="groups-button print-button" type="button">Print</button>
+                                        <button class="groups-button delete-button" type="button">Delete</button>
+                                        <div class="multiselect">
+                                            <div class="selectBox" onclick="showCheckboxes()">
+                                                <select class="column-visibility-button groups-button-lg">
+                                                    <option>Column Visual</option>
+                                                </select>
+                                                <div class="overSelect"></div>
+                                            </div>
+                                            <div id="checkboxes" style="display: flex;">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="fixed-table-wrap" style="width: 100%;">
+                                <table id="fresh-table" class="table">
+                                    <thead>
+                                    <tr>
+                                        <th rowspan="2" scope="col">Serial ID</th>
+                                        <th onclick="sortTable(1)" rowspan="2" scope="col">Permission Name</th>
+                                        <th rowspan="2" scope="col">Permission icon</th>
+                                        <th rowspan="2" scope="col">Permission URL</th>
+                                        <th rowspan="2" scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="permissionSubCatregoryDTO, status: ${permissionSubCategoryDTOList}">
+                                        <td th:text="${status.index + 1}"></td>
+                                        <td th:text="${permissionSubCatregoryDTO.subCategoryName}"></td>
+                                        <td th:text="${permissionSubCatregoryDTO.menuIconPath == null ? 'N/A': permissionSubCatregoryDTO.menuIconPath}"></td>
+                                        <td th:text="${permissionSubCatregoryDTO.subCategoryURL == null ? 'N/A' : permissionSubCatregoryDTO.subCategoryURL}"></td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Action</button>
+                                                <div id="myDropdown" class="dropdown-content">
+                                                    <a th:href="@{/auth/permissionsSubCategory/updateSub/{permissionName}/{subCategoryName}
+                                                    (permissionName=${permissionSubCatregoryDTO.permissionName}, subCategoryName=${permissionSubCatregoryDTO.subCategoryName})}"
+                                                        type="button"
+                                                        class="btn-dark">Edit</a>
+                                                    <a th:href="@{/auth/permissionsSubCategory/delete/{permissionName}/{subCategoryName}
+                                                    (permissionName=${permissionSubCatregoryDTO.permissionName}, subCategoryName=${permissionSubCatregoryDTO.subCategoryName})}"
+                                                        type="button"
+                                                        class="btn-danger">Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <!--                            <ul class="pagination">-->
+                                <!--                                <li onclick="prevPage()">Previous</li>-->
+                                <!--                                <li onclick="nextPage()">Next</li>-->
+                                <!--                            </ul>-->
+                            </div>
+                            <!--table finished-->
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row d-flex justify-content-between">
+                    <div class="col-md-4 col-sm-4">
+                        <!--                    <div class="x_panel tile fixed_height_60">-->
+                        <!--                        <div class="x_title">-->
+                        <!--                            <p id="showPageNumbers">Showing 01-09</p>-->
+                        <!--                            <div class="clearfix"></div>-->
+                        <!--                        </div>-->
+
+                        <!--                    </div>-->
+                    </div>
+
+                    <!--next and previous button-->
+
+                    <div class="col-md-4 col-sm-4 margin-sml">
+                        <div class="x_title nav navbar-right panel_toolbox">
+                            <ul class="nav navbar-right panel_toolbox pagination">
+                                <li class="previous" onclick="prevPage()">Previous</li>
+                                <li class="previous-center" id="pageNumber">1</li>
+                                <li class="next" onclick="nextPage()">Next</li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<script th:src="@{/boostrapVendor/jquery/dist/jquery.min.js}"></script>
+<!-- Bootstrap -->
+<script th:src="@{/boostrapVendor/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+<!-- FastClick -->
+<script th:src="@{/boostrapVendor/fastclick/lib/fastclick.js}"></script>
+<!-- NProgress -->
+<script th:src="@{/boostrapVendor/nprogress/nprogress.js}"></script>
+<!-- Chart.js -->
+<script th:src="@{/boostrapVendor/Chart.js/dist/Chart.min.js}"></script>
+<!-- gauge.js -->
+<script th:src="@{/boostrapVendor/gauge.js/dist/gauge.min.js}"></script>
+<!-- bootstrap-progressbar -->
+<script th:src="@{/boostrapVendor/bootstrap-progressbar/bootstrap-progressbar.min.js}"></script>
+<!-- iCheck -->
+<script th:src="@{/boostrapVendor/iCheck/icheck.min.js}"></script>
+<!-- Skycons -->
+<script th:src="@{/boostrapVendor/skycons/skycons.js}"></script>
+<!-- Flot -->
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.pie.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.time.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.stack.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.resize.js}"></script>
+<!-- Flot plugins -->
+<script th:src="@{/boostrapVendor/flot.orderbars/js/jquery.flot.orderBars.js}"></script>
+<script th:src="@{/boostrapVendor/flot-spline/js/jquery.flot.spline.min.js}"></script>
+<script th:src="@{/boostrapVendor/flot.curvedlines/curvedLines.js}"></script>
+<!-- DateJS -->
+<script th:src="@{/boostrapVendor/DateJS/build/date.js}"></script>
+<!-- JQVMap -->
+<script th:src="@{/boostrapVendor/jqvmap/dist/jquery.vmap.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/dist/maps/jquery.vmap.world.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/examples/js/jquery.vmap.sampledata.js}"></script>
+<!-- bootstrap-daterangepicker -->
+<script th:src="@{/boostrapVendor/moment/min/moment.min.js}"></script>
+<script th:src="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.js}"></script>
+
+<!-- Custom Theme Scripts -->
+<script th:src="@{/js/adminPanelJs/custom.min.js}"></script>
+<script th:src="@{/js/table_paginations.js}"></script>
+<script th:src="@{/js/adminPanelJs/alartsInAdmin.js}"></script>
+<script th:inline="javascript">
+    $(document).ready(function () {
+        let form = $('#merchantForm');
+        $('#selectOption1').change(function () {
+            let selectedValue = $(this).val();
+            // let currentURL = window.location.href;
+            let formAction;
+            formAction = '/auth/permissionsSubCategory/' + selectedValue;
+
+            form.attr('action', formAction);
+            form.submit();
+        });
+    });
+
+    // if (currentURL.includes("wellax")) {
+    //     // formAction = '/wellax/auth/recommendation/indexMerchants/' + selectedValue;
+    // } else {
+</script>
+
+</body>
+</html>

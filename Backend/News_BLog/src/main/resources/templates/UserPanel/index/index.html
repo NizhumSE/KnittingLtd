@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zalo Knitting Limited</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <link rel="icon" type="image/png" href="@{asset/images/zalofavicon.png}"/>
+    <!-- Bootstrap CSS -->
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Belleza&display=swap}" rel="stylesheet">
+    <!-- Locomotive Smooth Scroll CSS -->
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css}">
+
+    <link th:href="@{css/userPanelCss/css/style.css}" rel="stylesheet">
+
+
+</head>
+
+
+
+<body data-scroll-container>
+<!-- Header Section -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img th:src="@{assets/images/userImages/}" alt="Zalo Knitting Ltd" class="img-fluid custom-logo">
+            </a>
+            <!-- Toggler for responsive menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="fsize-20 navbar-nav gap-20 ms-auto bg-mobile-white">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Menu Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Page 1</a></li>
+                            <li><a class="dropdown-item" href="#">Page 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog Post 1</a></li>
+                            <li><a class="dropdown-item" href="#">Blog Post 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Production Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section" data-scroll-section>
+    <div class="container">
+        <h1 class="hero-text fsize-20">Our Manufacturing Magic</h1>
+        <p class="lead">Where Tradition Meets Innovation</p>
+    </div>
+</section>
+
+<!-- Image Section -->
+<section class="responsive-images py-5" data-scroll-section>
+
+    <div class="container border-bottom-black">
+        <div class="row">
+            <div class="col-md-4 image-card">
+                <img th:src="@{https://images.unsplash.com/photo-1655280056654-dda90a3e17de?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D}"
+                     alt="Image 1" class="img-fluid" loading="lazy">
+                <div class="mt-3">
+                    <div class="row">
+                        <!-- First Section -->
+                        <div class="col-12 col-md-6 mb-2">
+                            <h5 class="text-center fw-bold">20 +</h5>
+                            <p class="text-center text-muted fs-6 fs-md-5">
+                                Years of Experience
+                            </p>
+                        </div>
+                        <!-- Second Section -->
+                        <div class="col-12 col-md-6">
+                            <h5 class="text-center fw-bold">5k +</h5>
+                            <p class="text-center text-muted fs-6 fs-md-5">
+                                customers
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-5 image-card position-relative">
+                <img th:src="@{https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D}"
+                     alt="Image 2" class="img-fluid" loading="lazy">
+                <!-- Round Div -->
+
+                <div class="round-div">
+                    <div class="star">★</div>
+                    <div class="circle-text">
+                        <span>E</span>
+                        <span>l</span>
+                        <span>e</span>
+                        <span>g</span>
+                        <span>a</span>
+                        <span>n</span>
+                        <span>c</span>
+                        <span>e</span>
+                        <span>D</span>
+                        <span>e</span>
+                        <span>s</span>
+                        <span>I</span>
+                        <span>G</span>
+                        <span>N</span>
+                        <span>I</span>
+                        <span>N</span>
+                        <span>G</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 image-card">
+                <img th:src="@{https://images.unsplash.com/photo-1654110509803-4f53e0f9c192?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D}"
+                     alt="Image 3" class="img-fluid" loading="lazy">
+                <div class="mt-3">
+                    <p class="text-center text-muted">
+                        Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
+                        latest trends, we’ve got you covered.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <!-- Left Section: Heading -->
+            <div class="col-12 col-md-8">
+                <h1 class="text-start fw-bold mb-3">Get in Touch with Our Textile Mastery</h1>
+            </div>
+            <!-- Right Section: Button -->
+            <div class="col-12 col-md-4 text-md-end text-center">
+                <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold">Get Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Zalo Knitting Ltd. All Rights Reserved.</p>
+</footer>
+
+<!-- Locomotive Smooth Scroll JS -->
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js}"></script>
+<script th:inline="javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+        });
+    });
+</script>
+
+<script th:inline="javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".hero-text", {
+            opacity: 0,
+            y: 50,
+            duration: 1.2,
+            ease: "power3.out",
+            delay: 0.3
+        });
+        gsap.from(".lead", {
+            opacity: 0,
+            y: 50,
+            duration: 1.2,
+            ease: "power3.out",
+            delay: 0.6
+        });
+    });
+</script>
+
+
+<!-- Bootstrap Bundle JS -->
+<script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js}"></script>
+
+
+
+<!-- JavaScript Libraries -->
+<!--<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js}"></script>-->
+<!--<script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js}"></script>-->
+<!--<script th:src="@{js/userPanelJs/lib/easing.min.js}"></script>-->
+<!--<script th:src="@{js/userPanelJs/lib/waypoints.min.js}"></script>-->
+<!--<script th:src="@{js/userPanelJs/lib/owl.carousel.min.js}"></script>-->
+
+<!-- Template Javascript -->
+<!--<script th:src="@{js/userPanelJs/js/main.js}"></script>-->
+</body>
+
+</html>

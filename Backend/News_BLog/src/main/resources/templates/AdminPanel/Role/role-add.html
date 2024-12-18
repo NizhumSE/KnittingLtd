@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" th:href="@{/assets/images/adminImages/dg_logo.png}" type="image/ico">
+
+    <title>Desher Gorjon Admin Panel</title>
+    <!-- Bootstrap -->
+    <link th:href="@{/boostrapVendor/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link th:href="@{/boostrapVendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
+    <!-- NProgress -->
+    <link th:href="@{/boostrapVendor/nprogress/nprogress.css}" rel="stylesheet">
+    <!-- iCheck -->
+    <link th:href="@{/boostrapVendor/iCheck/skins/flat/green.css}" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link th:href="@{/boostrapVendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet">
+    <!-- JQVMap -->
+    <link th:href="@{/boostrapVendor/jqvmap/dist/jqvmap.min.css}" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link th:href="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.css}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link th:href="@{/css/adminPanelCss/admin_custom.min.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/style.css}" rel="stylesheet">
+    <link th:href="@{/css/adminPanelCss/dropdown.css}" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title">
+                    <a th:href="@{/index}" class="site_title"><img th:src="@{/assets/images/adminImages/dg_logo.png}" alt="image" style="height: 62px;"> </a>
+
+                </div>
+                <div class="clearfix"></div>
+
+                <!-- sidebar menu -->
+                <header th:replace="~{AdminPanel/fragments/sidemenu :: sidemenu}">
+
+                </header>
+                <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <header th:replace="~{AdminPanel/fragments/header :: header}">
+
+        </header>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="body">
+            <!-- top tiles -->
+            <div class="row d-flex">
+                <!--navbar start-->
+                <div class="navbar">
+                    <span class="font-l">Add New Role</span>
+                </div>
+                <div class="navbar">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><img th:src="@{/assets/images/adminImages/search.png}" alt="Profile Image"
+                                                   width="20"
+                                                   height="20"></button>
+                    </div>
+                </div>
+                <!--nav close-->
+            </div>
+            <!-- /top tiles -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                    <div class="dashboard_graph">
+                        <!--table content class=col-md-9 col-sm-9-->
+                        <div class="row x_title height-700">
+                            <!--Right search buttons-->
+                            <div class="box-border">
+                                <form action="#" th:action="@{/auth/role}" method="post" th:object="${dto}">
+                                    <div class="x_panel tile fixed_height_420 overflow_hidden">
+                                        <div class="Merchant">
+                                            <p class="font-m">Role Name:</p>
+                                            <div class="title">
+                                                <div class="navbar pt-4">
+                                                    <div class="search-bar-xsm">
+                                                        <input th:field="*{authority}" type="text"  placeholder="Enter role name" th:value="${dto.authority}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="margin-sm title d-flex mt-4">
+                                            <div class="button-group-container"style="margin-left: 15px;">
+                                                <button class="merchant-button pdf-button" type="submit">ADD</button>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!--table finished-->
+
+                        <!--                        <div class="clearfix"></div>-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script >-->
+<!--    function updateMerchantType(element) {-->
+<!--        var selectedValue = element.getAttribute('value');-->
+<!--        var merchantTypeSpan = document.getElementById('merchantTypeSpan');-->
+<!--        merchantTypeSpan.textContent = selectedValue;-->
+<!--    }-->
+<!--</script>-->
+<!--<script th:inline="javascript">-->
+<!--    function updateCountryCode(element) {-->
+<!--        var selectedValue = element.getAttribute('value');-->
+<!--        var countryCodeSpan = document.getElementById('countryCodeSpan');-->
+<!--        countryCodeSpan.textContent = selectedValue;-->
+<!--    }-->
+<!--</script>-->
+<!-- jQuery -->
+<script th:src="@{/boostrapVendor/jquery/dist/jquery.min.js}"></script>
+<!-- Bootstrap -->
+<script th:src="@{/boostrapVendor/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+<!-- FastClick -->
+<script th:src="@{/boostrapVendor/fastclick/lib/fastclick.js}"></script>
+<!-- NProgress -->
+<script th:src="@{/boostrapVendor/nprogress/nprogress.js}"></script>
+<!-- Chart.js -->
+<script th:src="@{/boostrapVendor/Chart.js/dist/Chart.min.js}"></script>
+<!-- gauge.js -->
+<script th:src="@{/boostrapVendor/gauge.js/dist/gauge.min.js}"></script>
+<!-- bootstrap-progressbar -->
+<script th:src="@{/boostrapVendor/bootstrap-progressbar/bootstrap-progressbar.min.js}"></script>
+<!-- iCheck -->
+<script th:src="@{/boostrapVendor/iCheck/icheck.min.js}"></script>
+<!-- Skycons -->
+<script th:src="@{/boostrapVendor/skycons/skycons.js}"></script>
+<!-- Flot -->
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.pie.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.time.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.stack.js}"></script>
+<script th:src="@{/boostrapVendor/Flot/jquery.flot.resize.js}"></script>
+<!-- Flot plugins -->
+<script th:src="@{/boostrapVendor/flot.orderbars/js/jquery.flot.orderBars.js}"></script>
+<script th:src="@{/boostrapVendor/flot-spline/js/jquery.flot.spline.min.js}"></script>
+<script th:src="@{/boostrapVendor/flot.curvedlines/curvedLines.js}"></script>
+<!-- DateJS -->
+<script th:src="@{/boostrapVendor/DateJS/build/date.js}"></script>
+<!-- JQVMap -->
+<script th:src="@{/boostrapVendor/jqvmap/dist/jquery.vmap.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/dist/maps/jquery.vmap.world.js}"></script>
+<script th:src="@{/boostrapVendor/jqvmap/examples/js/jquery.vmap.sampledata.js}"></script>
+<!-- bootstrap-daterangepicker -->
+<script th:src="@{/boostrapVendor/moment/min/moment.min.js}"></script>
+<script th:src="@{/boostrapVendor/bootstrap-daterangepicker/daterangepicker.js}"></script>
+
+<!-- Custom Theme Scripts -->
+<script th:src="@{/js/adminPanelJs/custom.min.js}"></script>
+<script th:src="@{/js/adminPanelJs/alartsInAdmin.js}"></script>
+
+</body>
+</html>

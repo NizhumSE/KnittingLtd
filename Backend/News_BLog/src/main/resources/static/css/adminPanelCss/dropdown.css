@@ -1,0 +1,166 @@
+/* Initial style for the dropdown container */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+#merchantTypeSpan{
+  color: #707070;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid darkgray;
+  padding: 10px 30px 10px 30px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 299px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+  color: #707070;
+}
+
+.dd-button:hover {
+  background-color: transparent;
+}
+
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  color: #707070;
+  list-style-type: none;
+}
+
+.dd-input+.dd-menu {
+  display: none;
+}
+
+.dd-input:checked+.dd-menu {
+  display: block;
+}
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #f6f6f6;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider {
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+/*after click */
+.dd-button::after {
+  content: "";
+  display: inline-block;
+  color:#707070;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+.dd-menu::after{
+  color: #707070;
+}
+
+/* Style the custom image */
+.custom-drop {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  /* Adjust this value to position the image as desired */
+  transform: translateY(-50%);
+  width: 10px;
+  /* Adjust the width and height according to your image */
+  height: 10px;
+  background: transparent;
+}
+
+.dd-menu {
+  position: absolute;
+  z-index: 1;
+  /* Ensure the menu appears above other content */
+  background-color: white;
+  /* Change the background color to your preference */
+  border: 1px solid #ccc;
+  /* Add a border or customize it as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Add a box shadow for a nice effect */
+  right: 0;
+  top: 100%;
+  /* Position the menu below the .dd-button */
+  display: none;
+  /* Hide the menu by default */
+  width: 150px;
+  /* Adjust the width to your preference */
+}
+
+/* Show the menu when the input is checked */
+.dd-input:checked+.dd-menu {
+  display: block;
+}
+
+/* Add more styling to the menu items as needed */
+.dd-menu li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Change background color of menu items on hover */
+.dd-menu li:hover {
+  background-color: #f0f0f0;
+}
