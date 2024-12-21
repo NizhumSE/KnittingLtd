@@ -16,7 +16,6 @@
     <!-- Locomotive Smooth Scroll CSS -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css">
-        
     <style>
         html {
             scroll-behavior: smooth;
@@ -28,7 +27,7 @@
             z-index: 1000;
             border-bottom: 2px solid black;
             background-color: #F5DDD2;
-            max-height: 130px;
+            max-height: 115px;
             min-height: auto;
         }
 
@@ -76,72 +75,6 @@
         .fsize-20 {
             font-size: 20px;
         }
-        
-
-
-                    /* Position the background images */
-            .top-right-bg {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 30%;
-                /* height: auto; */
-                height: 220px;
-                max-height: 220px;
-                background-image: url('/24itg.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: top right;
-                margin: auto;
-                padding: auto;
-                /* z-index: -1;  */
-                /* Place behind content */
-
-                background-position: 0% 50%;
-                background-repeat: no-repeat;
-                /* background-size: 35% auto; */
-                opacity: 1;
-                transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-                overflow: hidden;
-            }
-
-            .bottom-left-bg {
-                position: absolute;
-                bottom: 19%;
-                left: 0;
-                width: 30%;
-                height: 220px;
-                max-height: 220px;
-                /* background-image: url('https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=1920'); */
-                background-image: url('/3rfLine.png'); /* Test with an external image */
- /* Path to the root folder */
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: bottom left;
-                /* z-index: -1;  */
-                /* Place behind content */
-                background-position: 0% 50%;
-                background-repeat: no-repeat;
-                /* background-size: 35% auto; */
-                opacity: 1;
-                transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-            }
-
-            /* Responsive adjustments */
-            @media (max-width: 768px) { /* Tablet */
-                .top-right-bg,
-                .bottom-left-bg {
-                    width: 40%;
-                }
-            }
-
-            @media (max-width: 480px) { /* Mobile */
-                .top-right-bg,
-                .bottom-left-bg {
-                    width: 50%;
-                }
-            }
-
 
         @media (max-width: 768px) { /* Adjust the max-width as needed */
         .bg-mobile-white {
@@ -644,62 +577,106 @@
 
     </section>
 
-    <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
-        <!-- Background Images -->
-        <div class="top-right-bg"></div>
-        <div class="bottom-left-bg"></div>
-    
-        <!-- Content Section -->
+    <section class="responsive-images py-5 bg-white" data-scroll-section>
+
         <div class="container border-bottom-black">
             <div class="row">
                 <div class="mt-3">
                     <div class="row">
                         <!-- First Section -->
                         <div class="col-12 col-md-6 mb-2">
+                            <!-- <h5 class="text-center fw-bold">20 +</h5> -->
                             <h1 class="hero-text fsize-20">Why Our Manufacturing</h1>
-                            <h1>Your Trusted Textile<br>Manufacturer</h1>
+                            <h1> Your Trusted Textile<br>Manufacturer</h1>
                             <p class="text-muted">
                                 We believe in creating fashion that not only makes you look good<br> but also contributes to a better future.
                             </p>
+                            <!-- <p class="text-center text-muted fs-6 fs-md-5">
+                                Your Trusted Textile Manufacturer
+                            </p> -->
                         </div>
+                        <!-- Second Section -->
+                        <!-- <div class="col-12 col-md-6">
+                            <h5 class="text-center fw-bold">5k +</h5>
+                            <p class="text-center text-muted fs-6 fs-md-5">
+                                customers
+                            </p>
+                        </div> -->
+
                     </div>
                 </div>
-                <!-- Image Section -->
                 <div class="col-md-4 image-card">
                     <img src="https://images.unsplash.com/photo-1619239635762-8132f6dba51c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                         alt="Image 1" class="img-fluid" loading="lazy">
+                        alt="Image 1" class="img-fluid" loading="lazy">
+                 
+
+
                 </div>
+
+                <!-- <div class="col-md-4 mt-5 image-card position-relative">
+                    <img src="https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 2" class="img-fluid" loading="lazy">
+                   
+                    <div class="round-div">
+                        <div class="star">★</div>
+                        <div class="circle-text">
+                            <span>E</span>
+                            <span>l</span>
+                            <span>e</span>
+                            <span>g</span>
+                            <span>a</span>
+                            <span>n</span>
+                            <span>c</span>
+                            <span>e</span>
+                            <span>D</span>
+                            <span>e</span>
+                            <span>s</span>
+                            <span>I</span>
+                            <span>G</span>
+                            <span>N</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>G</span>
+                        </div>
+                    </div>
+
+                </div> -->
+
                 <div class="col-md-4 image-card mt-5">
                     <img src="https://plus.unsplash.com/premium_photo-1723672935578-81c0f7f60c2e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                          alt="Image 3" class="img-fluid" loading="lazy">
                     <div class="mt-3">
-                        <p class="text-center text-muted">
-                            Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
-                            latest trends, we’ve got you covered.
-                        </p>
-                        <div class="text-center mt-3">
-                            <a href="#" class="btn learn-more-btn">
-                                Learn More <span class="arrow border-bottom-black">→</span>
-                            </a>
-                        </div>
+                      <p class="text-center text-muted">
+                        Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
+                        latest trends, we’ve got you covered.
+                      </p>
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn learn-more-btn">
+                          Learn More <span class="arrow border-bottom-black">→</span>
+                        </a>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                  
+
             </div>
         </div>
-    
-        <!-- Call-to-Action Section -->
+
         <div class="container mt-5">
             <div class="row align-items-center">
+                <!-- Left Section: Heading -->
                 <div class="col-12 col-md-8">
                     <h1 class="text-start fw-bold mb-3">Get in Touch with Our Textile Mastery</h1>
                 </div>
+                <!-- Right Section: Button -->
                 <div class="col-12 col-md-4 text-md-end text-center">
                     <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold">Get Services</a>
                 </div>
             </div>
         </div>
+
+
     </section>
-    
 
     <!-- Footer Section -->
     <footer>
