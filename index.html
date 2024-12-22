@@ -16,6 +16,8 @@
     <!-- Locomotive Smooth Scroll CSS -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
         
     <style>
         html {
@@ -284,6 +286,38 @@
                     transform: translateX(-100%);
                 }
             }
+
+
+                /* Full-width responsive video */
+                    .video-full-width {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+
+                    /* Video wrapper for optional overlay content */
+                    .video-wrapper {
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .video-overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+                        z-index: 1;
+                        pointer-events: none; /* Prevent overlay from blocking video controls */
+                    }
+
+                    .video-overlay h2,
+                    .video-overlay p,
+                    .video-overlay a {
+                        z-index: 2; /* Ensure content appears above the overlay */
+                        pointer-events: auto; /* Allow interaction with buttons */
+                    }
 
 
 
@@ -790,7 +824,7 @@
                                  <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
                         </div>
                         <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
-                            <img src="rntrbr.png"
+                                 <img src="rntrbr.png"
                                  alt="Image 4" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
                                  <h3>Private Label Manufacturing</h3>
                                  <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
@@ -803,8 +837,8 @@
                 <div class="container my-4">
                     <div class="moving-banner text-black py-2">
                         <div class="text-wrapper d-flex">
-                            <span class="mx-auto">🚀 Welcome to our modern textile garments portfolio website! 🌟 Explore amazing designs now! 🧵</span>
-                            <span class="mx-auto">🚀 Welcome to our modern textile garments portfolio website! 🌟 Explore amazing designs now! 🧵</span>
+                            <span class="mx-auto">✨ Welcome to our sleek and modern textile garments Zalo! 🌟 Dive into a world of exquisite designs and craftsmanship today. 🧵</span>
+                            <span class="mx-auto">🚀 Discover innovation, style, and quality tailored to perfection! 🌐 Explore now and be inspired by our collection. 🧵</span>
                         </div>
                     </div>
                 </div>
@@ -833,11 +867,32 @@
                     <h1 id="counter" class="display-1">0%</h1>
                     <h2>Defect Rate</h2>
                     <p>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the latest trends, we’ve got you covered. Our commitment to sustainability and ethical practices ensures that every piece you receive from us is not only stylish but also environmentally responsible.</p>
-                    <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold">Get Services</a>
+                    <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold" style="background-color: #C05102;">Get Services</a>
                 </div>
             </div>
         </div>
     </section>
+
+
+            <!-- Started Video Module Section -->
+            <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
+                <div class="container-fluid px-0">
+                    <div class="video-wrapper position-relative">
+                        <!-- Video Element -->
+                        <video class="video-full-width" controls autoplay muted loop>
+                            <source src="grettings.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Overlay Content (Optional) -->
+                        <!-- <div class="video-overlay text-center text-white d-flex flex-column justify-content-center align-items-center">
+                            <h2 class="display-4 fw-bold">Welcome to Modern Textile</h2>
+                            <p class="lead">Discover the future of garment production and design</p>
+                            <a href="#" class="btn btn-warning text-white px-4 py-2 mt-3">Explore More</a>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
     
 
     
@@ -901,6 +956,7 @@
             });
         });
     </script>
+    
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
