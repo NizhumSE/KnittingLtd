@@ -262,6 +262,33 @@
             color: #000000;
         }
 
+
+        /*style for banner */
+            .moving-banner {
+                font-size: 2rem;
+                overflow: hidden;
+                white-space: nowrap;
+                position: relative;
+            }
+
+            .text-wrapper {
+                display: inline-flex;
+                animation: marquee 18s linear infinite;
+            }
+
+            @keyframes marquee {
+                from {
+                    transform: translateX(100%);
+                }
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+
+
+
+
+
         .circle-text span:nth-child(1) {
             transform: rotate(0deg) translate(45px) rotate(0deg);
         }
@@ -417,12 +444,17 @@
                 .hero-image img {
                     max-width: 150px; /* Smaller image size for mobile */
                 }
+
+                .text-wrapper {
+                display: inline-flex;
+                animation: marquee 10s linear infinite;
+            }
             }
 
 
 
         /* image hover */
-                    .img-fluid {
+            .img-fluid {
                 transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effects */
             }
 
@@ -724,26 +756,46 @@
 
                 <!-- Image Section -->
                 <div class="container">
-                    <div class="row justify-content-center gy-4 border border-dark">
+                    <div class="row justify-content-center gy-4">
                         <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
                             <img src="geometric.png"
                                  alt="Image 1" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
+                                 <h3>Custom Clothing Manufacturing</h3>
+                                 <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
                         </div>
                         <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
                             <img src="5yh.png"
                                  alt="Image 2" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
+                                 <h3>Bulk Textile or Clothing Production</h3>
+                                 <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
                         </div>
                         <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
                             <img src="eth.png"
                                  alt="Image 3" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
+                                 <h3>Fabric Sourcing and Supply</h3>
+                                 <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
                         </div>
                         <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
                             <img src="rntrbr.png"
                                  alt="Image 4" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
+                                 <h3>Private Label Manufacturing</h3>
+                                 <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
                         </div>
                        
                     </div>
                 </div>
+                
+
+                <div class="container my-4">
+                    <div class="moving-banner text-black py-2">
+                        <div class="text-wrapper d-flex">
+                            <span class="mx-auto">🚀 Welcome to our modern textile garments portfolio website! 🌟 Explore amazing designs now! 🧵</span>
+                            <span class="mx-auto">🚀 Welcome to our modern textile garments portfolio website! 🌟 Explore amazing designs now! 🧵</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
                 
 
                
