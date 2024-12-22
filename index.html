@@ -448,7 +448,11 @@
                 .text-wrapper {
                 display: inline-flex;
                 animation: marquee 10s linear infinite;
-            }
+                }
+
+                .navbar-brand img {
+                    height: 80px;
+                }
             }
 
 
@@ -462,6 +466,16 @@
                 transform: scale(1.05); /* Slight zoom effect */
                 filter: brightness(0.9); /* Darkens the image slightly */
             }
+
+
+            /* Add some spacing and visual appeal */
+            #counter {
+                font-size: 6rem; /* Makes the percentage stand out */
+                font-weight: bold;
+                color: #ff5722; 
+                /* Highlighted color for attention */
+                /* text-align: center; */
+                    }
 
 
 
@@ -794,27 +808,38 @@
                         </div>
                     </div>
                 </div>
-                
-                
-                
-
-               
-
             </div>
         </div>
+    </section>
+
+
+
+    <!-- stared Defect percentage sections  -->
+    <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
+        <!-- Background Images -->
+        <div class="top-right-bg"></div>
+        <div class="bottom-left-bg"></div>
     
-        <!-- Call-to-Action Section -->
-        <!-- <div class="container mt-5">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8">
-                    <h1 class="text-start fw-bold mb-3">Get in Touch with Our Textile Mastery</h1>
+        <!-- Content Section -->
+        <div class="container">
+            <div class="row">
+                <!-- Image Section -->
+                <div class="col-md-6 image-card">
+                    <img src="https://images.unsplash.com/photo-1619239635762-8132f6dba51c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="Image 1" class="img-fluid" loading="lazy">
                 </div>
-                <div class="col-12 col-md-4 text-md-end text-center">
+    
+                <div class="col-md-6 image-card mt-5">
+                    <h1 id="counter" class="display-1">0%</h1>
+                    <h2>Defect Rate</h2>
+                    <p>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the latest trends, we’ve got you covered. Our commitment to sustainability and ethical practices ensures that every piece you receive from us is not only stylish but also environmentally responsible.</p>
                     <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold">Get Services</a>
                 </div>
             </div>
-        </div> -->
+        </div>
     </section>
+    
+
     
 
     <!-- Footer Section -->
@@ -850,9 +875,37 @@
         });
     </script>
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // GSAP ScrollTrigger Countdown Animation
+            const counter = document.getElementById("counter");
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.to(counter, {
+                scrollTrigger: {
+                    trigger: counter,
+                    start: "top 80%", // Start animation when counter is 80% visible
+                    end: "top 50%",  // Ends animation when it's 50% visible
+                    scrub: 1,        // Smooth animation based on scroll
+                },
+                textContent: 98, // Final value for the countdown
+                duration: 4, // 4 seconds
+                ease: "power2.out",
+                snap: { textContent: 1 }, // Round to nearest integer
+                onUpdate: function () {
+                    // Update the inner text with percentage
+                    counter.innerText = Math.round(counter.textContent) + "%";
+                },
+            });
+        });
+    </script>
+
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 </body>
 
