@@ -1,4 +1,6 @@
 Responsive knitting Profile Portfolio.
-Locomotive Smooth scrooler.
+Locomotive
 Gsap
 bootstrap
+Springboot
+Thymeleaf

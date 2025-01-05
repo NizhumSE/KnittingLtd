@@ -78,6 +78,129 @@
         .fsize-20 {
             font-size: 20px;
         }
+
+
+                    /* .custom-border {
+                position: relative;
+                border-bottom: 2px solid orange;
+                height: 20px;
+                }
+                .circle {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                background-color: orange;
+                border-radius: 50%;
+                }
+                .circle:nth-child(1) {
+                left: 20%;
+                transform: translate(-50%, 0);
+                }
+                .circle:nth-child(2) {
+                left: 50%;
+                transform: translate(-50%, 0);
+                }
+                .circle:nth-child(3) {
+                right: 20%;
+                transform: translate(50%, 0);
+                } */
+
+                .custom-border {
+      position: relative;
+      border-bottom: 2px solid #E96304;
+      height: 20px;
+    }
+    /* .custom-border::before {
+      content: "<";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-100%, -50%);
+      font-size: 18px;
+      color: orange;
+      font-weight: bold;
+    } */
+    .custom-border::before {
+    content: "<";
+    position: absolute;
+    top: 50%;
+    left: 0.5%;
+    transform: translate(-100%, -20%);
+    font-size: 18px;
+    color: #E96304;
+    font-weight: bold;
+    }
+
+    .custom-border::after {
+    content: ">";
+    position: absolute;
+    top: 50%;
+    right: 0.5%;
+    transform: translate(100%, -20%);
+    font-size: 18px;
+    color: #E96304;
+    font-weight: bold;
+    }
+
+    /* .custom-border::after {
+      content: ">";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(100%, -50%);
+      font-size: 18px;
+      color: orange;
+      font-weight: bold;
+    } */
+    .circle {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background-color: #E96304;
+      border-radius: 50%;
+    }
+    .circle:nth-child(1) {
+      left: 20%;
+      transform: translate(-50%, 0);
+    }
+    .circle:nth-child(2) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    .circle:nth-child(3) {
+      right: 20%;
+      transform: translate(50%, 0);
+    }
+
+
+    .history-date {
+            color: #E9630470;
+            font-size: 72px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 1200px) {
+            .history-date {
+                font-size: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .history-date {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .history-date {
+                font-size: 36px;
+            }
+        }
         
 
 
@@ -142,6 +265,25 @@
                 .bottom-left-bg {
                     width: 50%;
                 }
+
+                .circle:nth-child(1) {
+                    left: 20%;
+                    transform: translate(-50%, 0);
+                    display: none;
+                }
+                .circle:nth-child(3) {
+                    left: 20%;
+                    transform: translate(-50%, 0);
+                    display: none;
+                }
+                .custom-border::before {
+                    left: 2%;
+                }
+                .custom-border::after {
+                    right: 2%;
+                }
+
+
             }
 
 
@@ -557,8 +699,8 @@
 
         footer {
             /* background-color: #E96304; */
-            background-color: #FFCA2C;
-            color: white;
+            background-color: #ebded7;
+            color: #000000;
             font-weight: bolder;
             padding: 20px 0;
             text-align: center;
@@ -893,13 +1035,97 @@
                 </div>
             </section>
 
+
+            <section class="responsive-images py-5 position-relative" data-scroll-section>
+                <!-- Content Section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="mt-3">
+                            <div class="row">
+                                <!-- First Section -->
+                                <div class="col-12 col-md-6 mb-2">
+                                    <h1 class="hero-text fsize-20">Our history</h1>
+                                    <h1>Our eco-friendly practices, responsible sourcing, and dedication to reducing our carbon footprint make us a responsible choice for fashion individuals and brands.</h1>
+                                    <!-- <p class="text-muted">
+                                        We believe in creating fashion that not only makes you look good<br> but also contributes to a better future.
+                                    </p> -->
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Image Section -->
+                        <div class="container">
+                            <div class="row justify-content-center gy-4">
+                                <div class="col-12 col-sm-3 col-md-4 col-lg-4">
+                                    <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/kjnv.png"
+                                         alt="Image 1" class="img-fluid" loading="lazy">
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
+                                    <h3>Expanding Horizons</h3>
+                                    <p>Since 1987, we have been committed to excellence and innovation. Guided by a passion for progress, we strive to shape the future with impactful solutions.</p>
+                                    <p class="history-date">1987</p>
+                                </div>
+                                
+                                <div class="col-12 col-sm-3 col-md-4 col-lg-4">
+                                    <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/thnthn.png"
+                                         alt="Image 3" class="img-fluid" loading="lazy">
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="container my-3">
+                            <div class="custom-border">
+                              <div class="circle"></div>
+                              <div class="circle"></div>
+                              <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="container mt-3">
+                            <div class="row justify-content-center gy-4">
+                                <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
+                                    <h3>Founding the Legacy</h3>
+                                    <p>Established on the foundation of vision and perseverance, we have built a legacy that inspires trust and excellence. Our journey is rooted in innovation, shaping a future defined by impact and growth.</p>
+                                    <p class="history-date">1975</p>
+                                </div>
+
+                                <div class="col-6 col-sm-12 col-md-4 col-lg-4">
+                                    <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/sjkgfb.png"
+                                         alt="Image 1" class="img-fluid" loading="lazy">
+                                </div>
+                                
+                                <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
+                                    <h3>Modernization and Sustainability</h3>
+                                    <p>Embracing the future with cutting-edge innovation, we integrate modernization with sustainable practices. Our commitment lies in creating solutions that drive progress while preserving resources for generations to come.</p>
+                                    <p class="history-date">1990</p>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                        
+        
+                        <!-- <div class="container my-4">
+                            <div class="moving-banner text-black py-2">
+                                <div class="text-wrapper d-flex">
+                                    <span class="mx-auto">✨ Welcome to our sleek and modern textile garments Zalo! 🌟 Dive into a world of exquisite designs and craftsmanship today. 🧵</span>
+                                    <span class="mx-auto">🚀 Discover innovation, style, and quality tailored to perfection! 🌐 Explore now and be inspired by our collection. 🧵</span>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
     
 
     
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Zalo Knitting Ltd. All Rights Reserved.</p>
+        <p>&copy; Nizum Daru (Louis). 2024 All Rights Reserved.</p>
     </footer>
 
     <!-- Locomotive Smooth Scroll JS -->
