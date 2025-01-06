@@ -1,97 +1,98 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zalo Home</title>
-        <!-- Favicon -->
-        <!-- <link rel="icon" type="image/png" href="asset/images/zalofavicon.png"/> -->
-        <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico.png">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
-        <!-- Locomotive Smooth Scroll CSS -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zalo Home</title>
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/png" href="asset/images/zalofavicon.png"/> -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
+    <!-- Locomotive Smooth Scroll CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-            
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
 
-            header {
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-                border-bottom: 2px solid black;
-                background-color: #F5DDD2;
-                max-height: 130px;
-                min-height: auto;
-            }
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-            body {
-                font-family: 'Belleza', sans-serif;
-                background-color: #F5DDD2;
-            }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid black;
+            background-color: #F5DDD2;
+            max-height: 130px;
+            min-height: auto;
+        }
 
-            /* overlay design */
-                    /* body {
+        body {
+            font-family: 'Belleza', sans-serif;
+            background-color: #F5DDD2;
+        }
+
+        /* overlay design */
+        /* body {
                     overflow: hidden;
                 } */
-            
 
 
-            .border-bottom-black {
-                border-bottom: 1px solid black;
-            }
 
-            .custom-logo {
-                max-height: 100px;
-                max-width: 150px;
-                height: auto;
-                width: auto;
-            }
+        .border-bottom-black {
+            border-bottom: 1px solid black;
+        }
 
-            .hero-section {
-                padding: 50px 20px;
-                text-align: left;
-            }
+        .custom-logo {
+            max-height: 100px;
+            max-width: 150px;
+            height: auto;
+            width: auto;
+        }
 
-            .hero-text {
-                font-size: 2.5rem;
-                color: #E96304;
-                margin-bottom: 30px;
-            }
+        .hero-section {
+            padding: 50px 20px;
+            text-align: left;
+        }
 
-            .responsive-images img {
-                width: 100%;
-                height: auto;
-                border-radius: 10px;
-            }
+        .hero-text {
+            font-size: 2.5rem;
+            color: #E96304;
+            margin-bottom: 30px;
+        }
 
-            .image-card {
-                padding: 10px;
-            }
+        .responsive-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
 
-            .fsize-18 {
-                font-size: 18px;
-            }
+        .image-card {
+            padding: 10px;
+        }
 
-            .fsize-20 {
-                font-size: 20px;
-            }
+        .fsize-18 {
+            font-size: 18px;
+        }
+
+        .fsize-20 {
+            font-size: 20px;
+        }
 
 
         .custom-border {
-        position: relative;
-        border-bottom: 2px solid #E96304;
-        height: 20px;
+            position: relative;
+            border-bottom: 2px solid #E96304;
+            height: 20px;
         }
+
         /* .custom-border::before {
         content: "<";
         position: absolute;
@@ -103,33 +104,34 @@
         font-weight: bold;
         } */
         .accordion-item {
-                border: none;
-                border-bottom: 1px solid #ddd;
-            }
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
 
-            .collapsed::after{
-                color: #E96304 !important;
-            }
+        .collapsed::after {
+            color: #E96304 !important;
+        }
+
         .custom-border::before {
-        content: "<";
-        position: absolute;
-        top: 50%;
-        left: 0.5%;
-        transform: translate(-100%, -20%);
-        font-size: 18px;
-        color: #E96304;
-        font-weight: bold;
+            content: "<";
+            position: absolute;
+            top: 50%;
+            left: 0.5%;
+            transform: translate(-100%, -20%);
+            font-size: 18px;
+            color: #E96304;
+            font-weight: bold;
         }
 
         .custom-border::after {
-        content: ">";
-        position: absolute;
-        top: 50%;
-        right: 0.5%;
-        transform: translate(100%, -20%);
-        font-size: 18px;
-        color: #E96304;
-        font-weight: bold;
+            content: ">";
+            position: absolute;
+            top: 50%;
+            right: 0.5%;
+            transform: translate(100%, -20%);
+            font-size: 18px;
+            color: #E96304;
+            font-weight: bold;
         }
 
         /* .custom-border::after {
@@ -143,431 +145,473 @@
         font-weight: bold;
         } */
         .circle {
-        position: absolute;
-        top: 60%;
-        transform: translateY(-50%);
-        width: 15px;
-        height: 15px;
-        background-color: #E96304;
-        border-radius: 50%;
+            position: absolute;
+            top: 60%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background-color: #E96304;
+            border-radius: 50%;
         }
+
         .circle:nth-child(1) {
-        left: 20%;
-        transform: translate(-50%, 0);
+            left: 20%;
+            transform: translate(-50%, 0);
         }
+
         .circle:nth-child(2) {
-        left: 50%;
-        transform: translate(-50%, 0);                                    
+            left: 50%;
+            transform: translate(-50%, 0);
         }
+
         .circle:nth-child(3) {
-        right: 20%;
-        transform: translate(50%, 0);
+            right: 20%;
+            transform: translate(50%, 0);
         }
 
-        .accordion{
+        .accordion {
             font-size: 18px;
         }
-        .accordion::after{
+
+        .accordion::after {
             font-size: 18px;
-            color: #E96304 !important; 
+            color: #E96304 !important;
         }
-        .accordion-button{
+
+        .accordion-button {
             font-size: 24px;
-                
-        }
-        .accordion-button:not(.collapsed) {
-        color: #E96304 !important; /* Forcefully override the color */
-        background-color: transparent !important; /* Remove the background color */
-        box-shadow: none !important; /* Remove the box shadow */
-    }
-    .button.accordion-button::after {
-        color: #E96304 !important;
-    }
-    .accordion-button:focus {
-        z-index: 3;
-        border-color: transparent !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
 
-    button:focus:not(:focus-visible) {
-        outline: none !important;
-        outline-color: none !important;
-        outline-style: initial;
-        outline-width: 0px;
-        border-color: transparent !important;
-    }
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #E96304 !important;
+            /* Forcefully override the color */
+            background-color: transparent !important;
+            /* Remove the background color */
+            box-shadow: none !important;
+            /* Remove the box shadow */
+        }
+
+        .button.accordion-button::after {
+            color: #E96304 !important;
+        }
+
+        .accordion-button:focus {
+            z-index: 3;
+            border-color: transparent !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        button:focus:not(:focus-visible) {
+            outline: none !important;
+            outline-color: none !important;
+            outline-style: initial;
+            outline-width: 0px;
+            border-color: transparent !important;
+        }
+
+
+        .custom-btn {
+            transition: background-color 0.3s ease;
+            /* Smooth transition for background color */
+        }
+
+        .custom-btn:hover {
+            background-color: #9f3e01;
+            /* Deeper color for hover effect */
+        }
+
 
 
         .history-date {
-                color: #E9630470;
-                font-size: 72px;
-                text-align: center;
-                margin: 20px 0;
+            color: #E9630470;
+            font-size: 72px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 1200px) {
+            .history-date {
+                font-size: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .history-date {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .history-date {
+                font-size: 36px;
+            }
+        }
+
+
+
+        /* Position the background images */
+        .top-right-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            /* height: auto; */
+            height: 355px;
+            max-height: 355px;
+            background-image: url('/24itg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top right;
+            margin: auto;
+            padding: auto;
+            /* z-index: -1;  */
+            /* Place behind content */
+
+            background-position: 0% 50%;
+            background-repeat: no-repeat;
+            /* background-size: 35% auto; */
+            opacity: 1;
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+            overflow: hidden;
+        }
+
+        .bottom-left-bg {
+            position: absolute;
+            bottom: 12%;
+            left: 0;
+            width: 30%;
+            height: 220px;
+            max-height: 310px;
+            /* background-image: url('https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=1920'); */
+            background-image: url('/3rfLine.png');
+            /* Test with an external image */
+            /* Path to the root folder */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            /* z-index: -1;  */
+            /* Place behind content */
+            background-position: 0% 50%;
+            background-repeat: no-repeat;
+            /* background-size: 35% auto; */
+            opacity: 1;
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+
+            /* Tablet */
+            .top-right-bg,
+            .bottom-left-bg {
+                width: 40%;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* Mobile */
+            .top-right-bg,
+            .bottom-left-bg {
+                width: 50%;
             }
 
-            @media (max-width: 1200px) {
-                .history-date {
-                    font-size: 60px;
-                }
+            .circle:nth-child(1) {
+                left: 20%;
+                transform: translate(-50%, 0);
+                display: none;
             }
 
-            @media (max-width: 768px) {
-                .history-date {
-                    font-size: 48px;
-                }
+            .circle:nth-child(3) {
+                left: 20%;
+                transform: translate(-50%, 0);
+                display: none;
             }
 
-            @media (max-width: 480px) {
-                .history-date {
-                    font-size: 36px;
-                }
+            .custom-border::before {
+                left: 2%;
             }
-            
+
+            .custom-border::after {
+                right: 2%;
+            }
 
 
-                        /* Position the background images */
-                .top-right-bg {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 30%;
-                    /* height: auto; */
-                    height: 355px;
-                    max-height: 355px;
-                    background-image: url('/24itg.png');
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: top right;
-                    margin: auto;
-                    padding: auto;
-                    /* z-index: -1;  */
-                    /* Place behind content */
-
-                    background-position: 0% 50%;
-                    background-repeat: no-repeat;
-                    /* background-size: 35% auto; */
-                    opacity: 1;
-                    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-                    overflow: hidden;
-                }
-
-                .bottom-left-bg {
-                    position: absolute;
-                    bottom: 12%;
-                    left: 0;
-                    width: 30%;
-                    height: 220px;
-                    max-height: 310px;
-                    /* background-image: url('https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=1920'); */
-                    background-image: url('/3rfLine.png'); /* Test with an external image */
-    /* Path to the root folder */
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-position: bottom left;
-                    /* z-index: -1;  */
-                    /* Place behind content */
-                    background-position: 0% 50%;
-                    background-repeat: no-repeat;
-                    /* background-size: 35% auto; */
-                    opacity: 1;
-                    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-                }
-
-                /* Responsive adjustments */
-                @media (max-width: 768px) { /* Tablet */
-                    .top-right-bg,
-                    .bottom-left-bg {
-                        width: 40%;
-                    }
-                }
-
-                @media (max-width: 480px) { /* Mobile */
-                    .top-right-bg,
-                    .bottom-left-bg {
-                        width: 50%;
-                    }
-
-                    .circle:nth-child(1) {
-                        left: 20%;
-                        transform: translate(-50%, 0);
-                        display: none;
-                    }
-                    .circle:nth-child(3) {
-                        left: 20%;
-                        transform: translate(-50%, 0);
-                        display: none;
-                    }
-                    .custom-border::before {
-                        left: 2%;
-                    }
-                    .custom-border::after {
-                        right: 2%;
-                    }
+        }
 
 
-                }
+        @media (max-width: 768px) {
 
-
-            @media (max-width: 768px) { /* Adjust the max-width as needed */
+            /* Adjust the max-width as needed */
             .bg-mobile-white {
-                backdrop-filter: blur(8px); /* Applies the blur effect */
-                background-color: rgba(245, 221, 210, 0.8); /* #F5DDD2 with 80% opacity */
-                border-bottom-left-radius: 10px; /* Adds bottom-left radius */
-                border-bottom-right-radius: 10px; /* Adds bottom-right radius */
-                }
+                backdrop-filter: blur(8px);
+                /* Applies the blur effect */
+                background-color: rgba(245, 221, 210, 0.8);
+                /* #F5DDD2 with 80% opacity */
+                border-bottom-left-radius: 10px;
+                /* Adds bottom-left radius */
+                border-bottom-right-radius: 10px;
+                /* Adds bottom-right radius */
             }
+        }
 
-            .gap-20 {
-                gap: 20px;
-            }
+        .gap-20 {
+            gap: 20px;
+        }
 
-            .lead {
-                font-size: clamp(40px, 10vw, 135px);
-                line-height: 1em;
-            }
+        .lead {
+            font-size: clamp(40px, 10vw, 135px);
+            line-height: 1em;
+        }
 
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .hero-section h1 {
+        @keyframes fadeInUp {
+            from {
                 opacity: 0;
-                animation: fadeInUp 1s ease-in-out forwards;
-                animation-delay: 0.3s;
+                transform: translateY(20px);
             }
 
-            .hero-section p {
-                opacity: 0;
-                animation: fadeInUp 1s ease-in-out forwards;
-                animation-delay: 0.6s;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-section h1 {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        .hero-section p {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+            animation-delay: 0.6s;
+        }
+
+        /* rounded circl css */
+        .image-card {
+            position: relative;
+
+        }
+
+        .learn-more-btn {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more-btn .arrow {
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            color: orange;
+        }
+
+        .learn-more-btn:hover .arrow {
+            color: orange;
+        }
+
+        .round-div {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 150px;
+            /* Adjust size */
+            height: 150px;
+            /* Adjust size */
+            border-radius: 50%;
+            background-color: #FFD700;
+            /* Gold color for the background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            animation: spin 10s linear infinite;
+            /* Spins like a car wheel */
+            overflow: hidden;
+            /* Ensure text fits inside the circle */
+            z-index: 2;
+        }
+
+        .star {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+
+
+        .circle-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            pointer-events: none;
+            /* Prevents unwanted interactions */
+        }
+
+        .circle-text span {
+            position: absolute;
+            transform-origin: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+
+        /*style for banner */
+        .moving-banner {
+            font-size: 2rem;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .text-wrapper {
+            display: inline-flex;
+            animation: marquee 18s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
             }
 
-            /* rounded circl css */
-            .image-card {
-                position: relative;
-            
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+
+        /* Full-width responsive video */
+        .video-full-width {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Video wrapper for optional overlay content */
+        .video-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent overlay */
+            z-index: 1;
+            pointer-events: none;
+            /* Prevent overlay from blocking video controls */
+        }
+
+        .video-overlay h2,
+        .video-overlay p,
+        .video-overlay a {
+            z-index: 2;
+            /* Ensure content appears above the overlay */
+            pointer-events: auto;
+            /* Allow interaction with buttons */
+        }
+
+
+
+
+
+        .circle-text span:nth-child(1) {
+            transform: rotate(0deg) translate(45px) rotate(0deg);
+        }
+
+        .circle-text span:nth-child(2) {
+            transform: rotate(22.5deg) translate(45px) rotate(-22.5deg);
+        }
+
+        .circle-text span:nth-child(3) {
+            transform: rotate(45deg) translate(45px) rotate(-45deg);
+        }
+
+        .circle-text span:nth-child(4) {
+            transform: rotate(67.5deg) translate(45px) rotate(-67.5deg);
+        }
+
+        .circle-text span:nth-child(5) {
+            transform: rotate(90deg) translate(45px) rotate(-90deg);
+        }
+
+        .circle-text span:nth-child(6) {
+            transform: rotate(112.5deg) translate(45px) rotate(-112.5deg);
+        }
+
+        .circle-text span:nth-child(7) {
+            transform: rotate(135deg) translate(45px) rotate(-135deg);
+        }
+
+        .circle-text span:nth-child(8) {
+            transform: rotate(157.5deg) translate(45px) rotate(-157.5deg);
+        }
+
+        .circle-text span:nth-child(9) {
+            transform: rotate(180deg) translate(45px) rotate(-180deg);
+        }
+
+        .circle-text span:nth-child(10) {
+            transform: rotate(202.5deg) translate(45px) rotate(-202.5deg);
+        }
+
+        .circle-text span:nth-child(11) {
+            transform: rotate(225deg) translate(45px) rotate(-225deg);
+        }
+
+        .circle-text span:nth-child(12) {
+            transform: rotate(247.5deg) translate(45px) rotate(-247.5deg);
+        }
+
+        .circle-text span:nth-child(13) {
+            transform: rotate(270deg) translate(45px) rotate(-270deg);
+        }
+
+        .circle-text span:nth-child(14) {
+            transform: rotate(292.5deg) translate(45px) rotate(-292.5deg);
+        }
+
+        .circle-text span:nth-child(15) {
+            transform: rotate(315deg) translate(45px) rotate(-315deg);
+        }
+
+        .circle-text span:nth-child(16) {
+            transform: rotate(337.5deg) translate(45px) rotate(-337.5deg);
+        }
+
+
+
+
+
+        /* Spin animation for the round div */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
             }
 
-                        .learn-more-btn {
-                    text-decoration: none;
-                    font-weight: bold;
-                    color: black;
-                    transition: color 0.3s ease;
-                }
-
-                .learn-more-btn .arrow {
-                    display: inline-block;
-                    transition: color 0.3s ease;
-                }
-
-                .learn-more-btn:hover {
-                    color: orange;
-                }
-
-                .learn-more-btn:hover .arrow {
-                    color: orange;
-                }
-
-            .round-div {
-                position: absolute;
-                top: -15px;
-                right: -15px;
-                width: 150px;
-                /* Adjust size */
-                height: 150px;
-                /* Adjust size */
-                border-radius: 50%;
-                background-color: #FFD700;
-                /* Gold color for the background */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                animation: spin 10s linear infinite;
-                /* Spins like a car wheel */
-                overflow: hidden;
-                /* Ensure text fits inside the circle */
-                z-index: 2;
+            100% {
+                transform: rotate(360deg);
             }
+        }
 
-            .star {
-                font-size: 16px;
-                font-weight: bold;
-                color: #ffffff;
-            }
-
-
-
-            .circle-text {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                pointer-events: none;
-                /* Prevents unwanted interactions */
-            }
-
-            .circle-text span {
-                position: absolute;
-                transform-origin: center;
-                font-size: 12px;
-                font-weight: bold;
-                color: #000000;
-            }
-
-
-            /*style for banner */
-                .moving-banner {
-                    font-size: 2rem;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    position: relative;
-                }
-
-                .text-wrapper {
-                    display: inline-flex;
-                    animation: marquee 18s linear infinite;
-                }
-
-                @keyframes marquee {
-                    from {
-                        transform: translateX(100%);
-                    }
-                    to {
-                        transform: translateX(-100%);
-                    }
-                }
-
-
-                    /* Full-width responsive video */
-                        .video-full-width {
-                            width: 100%;
-                            height: auto;
-                            object-fit: cover;
-                        }
-
-                        /* Video wrapper for optional overlay content */
-                        .video-wrapper {
-                            position: relative;
-                            overflow: hidden;
-                        }
-
-                        .video-overlay {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            bottom: 0;
-                            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-                            z-index: 1;
-                            pointer-events: none; /* Prevent overlay from blocking video controls */
-                        }
-
-                        .video-overlay h2,
-                        .video-overlay p,
-                        .video-overlay a {
-                            z-index: 2; /* Ensure content appears above the overlay */
-                            pointer-events: auto; /* Allow interaction with buttons */
-                        }
-
-
-
-
-
-            .circle-text span:nth-child(1) {
-                transform: rotate(0deg) translate(45px) rotate(0deg);
-            }
-
-            .circle-text span:nth-child(2) {
-                transform: rotate(22.5deg) translate(45px) rotate(-22.5deg);
-            }
-
-            .circle-text span:nth-child(3) {
-                transform: rotate(45deg) translate(45px) rotate(-45deg);
-            }
-
-            .circle-text span:nth-child(4) {
-                transform: rotate(67.5deg) translate(45px) rotate(-67.5deg);
-            }
-
-            .circle-text span:nth-child(5) {
-                transform: rotate(90deg) translate(45px) rotate(-90deg);
-            }
-
-            .circle-text span:nth-child(6) {
-                transform: rotate(112.5deg) translate(45px) rotate(-112.5deg);
-            }
-
-            .circle-text span:nth-child(7) {
-                transform: rotate(135deg) translate(45px) rotate(-135deg);
-            }
-
-            .circle-text span:nth-child(8) {
-                transform: rotate(157.5deg) translate(45px) rotate(-157.5deg);
-            }
-
-            .circle-text span:nth-child(9) {
-                transform: rotate(180deg) translate(45px) rotate(-180deg);
-            }
-
-            .circle-text span:nth-child(10) {
-                transform: rotate(202.5deg) translate(45px) rotate(-202.5deg);
-            }
-
-            .circle-text span:nth-child(11) {
-                transform: rotate(225deg) translate(45px) rotate(-225deg);
-            }
-
-            .circle-text span:nth-child(12) {
-                transform: rotate(247.5deg) translate(45px) rotate(-247.5deg);
-            }
-
-            .circle-text span:nth-child(13) {
-                transform: rotate(270deg) translate(45px) rotate(-270deg);
-            }
-
-            .circle-text span:nth-child(14) {
-                transform: rotate(292.5deg) translate(45px) rotate(-292.5deg);
-            }
-
-            .circle-text span:nth-child(15) {
-                transform: rotate(315deg) translate(45px) rotate(-315deg);
-            }
-
-            .circle-text span:nth-child(16) {
-                transform: rotate(337.5deg) translate(45px) rotate(-337.5deg);
-            }
-
-
-
-
-
-            /* Spin animation for the round div */
-            @keyframes spin {
-                0% {
-                    transform: rotate(0deg);
-                }
-
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-
-            /* Rotate text animation */
-            /* @keyframes rotateText {
+        /* Rotate text animation */
+        /* @keyframes rotateText {
             0% {
                 transform: rotate(0deg);
             }
@@ -577,30 +621,30 @@
         } */
 
 
-            /* Custom Scrollbar */
-            html {
-                scroll-behavior: smooth;
-                /* Custom scroll styling */
-                scrollbar-width: thin;
-                /* scrollbar-color: #E96304 #F5DDD2;  */
-                /* scrollbar thumb and track color */
-            }
+        /* Custom Scrollbar */
+        html {
+            scroll-behavior: smooth;
+            /* Custom scroll styling */
+            scrollbar-width: thin;
+            /* scrollbar-color: #E96304 #F5DDD2;  */
+            /* scrollbar thumb and track color */
+        }
 
 
-            .navbar-brand img{
-                height: 150px;
-            }
+        .navbar-brand img {
+            height: 150px;
+        }
 
-            body {
-                font-family: 'Belleza', sans-serif;
-                background-color: #F5DDD2;
-                /* For Webkit browsers (Chrome, Safari) */
-                -webkit-scrollbar-width: thin;
-                /* -webkit-scrollbar-color: #E96304 #F5DDD2; */
-            }
+        body {
+            font-family: 'Belleza', sans-serif;
+            background-color: #F5DDD2;
+            /* For Webkit browsers (Chrome, Safari) */
+            -webkit-scrollbar-width: thin;
+            /* -webkit-scrollbar-color: #E96304 #F5DDD2; */
+        }
 
-            /* Base styling for the hero image */
-            /* .hero-image {
+        /* Base styling for the hero image */
+        /* .hero-image {
                 position: absolute;
                 right: 0;
                 top: 80%;
@@ -609,150 +653,171 @@
             }
 
             /* Responsive adjustments */
-            /* Base styling for the hero image container */
+        /* Base styling for the hero image container */
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 80%;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        /* Base styling for the image */
+        .hero-image img {
+            width: 100%;
+            /* Take full width of its container */
+            height: auto;
+            /* Maintain aspect ratio */
+            max-width: 300px;
+            /* Set a maximum size */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+
+            /* Tablet */
             .hero-image {
-                position: absolute;
-                right: 0;
-                top: 80%;
-                width: 100%;
+                top: 100%;
+            }
+
+            .hero-image img {
                 max-width: 200px;
+                /* Reduce max width on smaller screens */
             }
-            
-                /* Base styling for the image */
-                .hero-image img {
-                    width: 100%; /* Take full width of its container */
-                    height: auto; /* Maintain aspect ratio */
-                    max-width: 300px; /* Set a maximum size */
-                }
+        }
 
-                /* Responsive adjustments */
-                @media (max-width: 768px) { /* Tablet */
-                    .hero-image {
-                        top: 100%;
-                    }
-                    .hero-image img {
-                        max-width: 200px; /* Reduce max width on smaller screens */
-                    }
-                }
+        @media (max-width: 480px) {
 
-                @media (max-width: 480px) { /* Mobile */
-                    .hero-image {
-                        top: 90%;
-                    }
-                    .hero-image img {
-                        max-width: 150px; /* Smaller image size for mobile */
-                    }
-
-                    .text-wrapper {
-                    display: inline-flex;
-                    animation: marquee 10s linear infinite;
-                    }
-
-                    .navbar-brand img {
-                        height: 80px;
-                    }
-                }
-
-
-
-            /* image hover */
-                .img-fluid {
-                    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effects */
-                }
-
-                .img-fluid:hover {
-                    transform: scale(1.05); /* Slight zoom effect */
-                    filter: brightness(0.9); /* Darkens the image slightly */
-                }
-
-
-                /* Add some spacing and visual appeal */
-                #counter {
-                    font-size: 6rem; /* Makes the percentage stand out */
-                    font-weight: bold;
-                    color: #ff5722; 
-                    /* Highlighted color for attention */
-                    /* text-align: center; */
-                        }
-
-
-
-            ::-webkit-scrollbar {
-                width: 5px;
-                /* Set the width of the scrollbar */
-                border-radius: 10px;
-                /* Rounded corners */
+            /* Mobile */
+            .hero-image {
+                top: 90%;
             }
 
-            ::-webkit-scrollbar-thumb {
-                /* background-color: #E96304;  */
-                /* Thumb color */
-                border-radius: 10px;
-                /* Rounded corners */
+            .hero-image img {
+                max-width: 150px;
+                /* Smaller image size for mobile */
             }
 
-            ::-webkit-scrollbar-track {
-                /* background-color: #F5DDD2;  */
-                /* Track color */
-                border-radius: 10px;
-                /* Rounded corners */
+            .text-wrapper {
+                display: inline-flex;
+                animation: marquee 10s linear infinite;
             }
 
-
-
-
-            @media (max-width: 1200px) {
-                .lead {
-                    font-size: 100px;
-                }
+            .navbar-brand img {
+                height: 80px;
             }
-
-            @media (max-width: 768px) {
-                .lead {
-                    font-size: 70px;
-                }
-            }
-
-            @media (max-width: 480px) {
-                .lead {
-                    font-size: 40px;
-                }
-            }
-
-            footer {
-                /* background-color: #E96304; */
-                background-color: #ebded7;
-                color: #000000;
-                font-weight: bolder;
-                padding: 20px 0;
-                text-align: center;
-            }
-
-            /* overlay */
-            .overlayer {
-        background: url('https://images.unsplash.com/photo-1574120153654-453fb26e6bd4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2FybWVudHN8ZW58MHx8MHx8fDA%3D') no-repeat center center;
-        background-size: cover;
-        position: relative;
-        height: 100vh; /* Adjust height as needed */
-    }
-
-        .overlayer .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(10px) brightness(0.7); /* Adjust blur and brightness as desired */
-        background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay */
-        opacity: 0.85; /* Adjust opacity for a more elegant look */
-        z-index: 1;
-        transition: opacity 0.3s ease-in-out; /* Smooth transition effect for dynamic changes */
         }
 
 
-        .overlayer > * {
+
+        /* image hover */
+        .img-fluid {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            /* Smooth transition for hover effects */
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            /* Slight zoom effect */
+            filter: brightness(0.9);
+            /* Darkens the image slightly */
+        }
+
+
+        /* Add some spacing and visual appeal */
+        #counter {
+            font-size: 6rem;
+            /* Makes the percentage stand out */
+            font-weight: bold;
+            color: #ff5722;
+            /* Highlighted color for attention */
+            /* text-align: center; */
+        }
+
+
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            /* Set the width of the scrollbar */
+            border-radius: 10px;
+            /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            /* background-color: #E96304;  */
+            /* Thumb color */
+            border-radius: 10px;
+            /* Rounded corners */
+        }
+
+        ::-webkit-scrollbar-track {
+            /* background-color: #F5DDD2;  */
+            /* Track color */
+            border-radius: 10px;
+            /* Rounded corners */
+        }
+
+
+
+
+        @media (max-width: 1200px) {
+            .lead {
+                font-size: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .lead {
+                font-size: 70px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lead {
+                font-size: 40px;
+            }
+        }
+
+        footer {
+            /* background-color: #E96304; */
+            background-color: #ebded7;
+            color: #000000;
+            font-weight: bolder;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* overlay */
+        .overlayer {
+            background: url('https://images.unsplash.com/photo-1574120153654-453fb26e6bd4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2FybWVudHN8ZW58MHx8MHx8fDA%3D') no-repeat center center;
+            background-size: cover;
             position: relative;
-            z-index: 2; /* Ensure content is above the overlay */
+            height: 100vh;
+            /* Adjust height as needed */
+        }
+
+        .overlayer .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px) brightness(0.7);
+            /* Adjust blur and brightness as desired */
+            background-color: rgba(0, 0, 0, 0.3);
+            /* Semi-transparent dark overlay */
+            opacity: 0.85;
+            /* Adjust opacity for a more elegant look */
+            z-index: 1;
+            transition: opacity 0.3s ease-in-out;
+            /* Smooth transition effect for dynamic changes */
+        }
+
+
+        .overlayer>* {
+            position: relative;
+            z-index: 2;
+            /* Ensure content is above the overlay */
         }
 
         .content {
@@ -760,233 +825,245 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            text-align: center; /* Optional: Centers text inside the div */
-            z-index: 2; /* Ensures it appears above the overlay */
-            color: #fff; /* Optional: Makes text stand out if the background is dark */
-            max-width: 80%; /* Optional: Limits content width for better readability */
+            text-align: center;
+            /* Optional: Centers text inside the div */
+            z-index: 2;
+            /* Ensures it appears above the overlay */
+            color: #fff;
+            /* Optional: Makes text stand out if the background is dark */
+            max-width: 80%;
+            /* Optional: Limits content width for better readability */
         }
 
-            .content h1 {
-        font-size: 78px;
-        font-weight: bold; /* Optional: Makes the heading more prominent */
-        margin: 0; /* Optional: Removes default margin for better spacing control */
-        line-height: 1.2; /* Optional: Adjust line spacing if text wraps */
-        color: #fff; /* Optional: Ensures visibility on a dark background */
-    }
+        .content h1 {
+            font-size: 78px;
+            font-weight: bold;
+            /* Optional: Makes the heading more prominent */
+            margin: 0;
+            /* Optional: Removes default margin for better spacing control */
+            line-height: 1.2;
+            /* Optional: Adjust line spacing if text wraps */
+            color: #fff;
+            /* Optional: Ensures visibility on a dark background */
+        }
 
-    .content p {
-        font-size: 22px;
-        margin-top: 20px; /* Adds spacing between the heading and paragraph */
-        line-height: 1.6; /* Improves readability */
-        color: #ddd; /* Optional: Slightly lighter color for subtle contrast */
-    }
+        .content p {
+            font-size: 22px;
+            margin-top: 20px;
+            /* Adds spacing between the heading and paragraph */
+            line-height: 1.6;
+            /* Improves readability */
+            color: #ddd;
+            /* Optional: Slightly lighter color for subtle contrast */
+        }
+    </style>
+</head>
 
-        </style>
-    </head>
-
-    <body data-scroll-container>
-        <!-- Header Section -->
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="#">
-                        <img src="zkl.png" alt="Zalo Knitting Ltd" class="img-fluid custom-logo">
-                    </a>
-                    <!-- Toggler for responsive menu -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- Navbar Links -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="fsize-20 navbar-nav gap-20 ms-auto bg-mobile-white ">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Menu Pages
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Page 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Page 2</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Blog
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Blog Post 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Blog Post 2</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#gallery">Production Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                        </ul>
-                    </div>
+<body data-scroll-container>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="zkl.png" alt="Zalo Knitting Ltd" class="img-fluid custom-logo">
+                </a>
+                <!-- Toggler for responsive menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="fsize-20 navbar-nav gap-20 ms-auto bg-mobile-white ">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Menu Pages
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Page 1</a></li>
+                                <li><a class="dropdown-item" href="#">Page 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Blog
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Blog Post 1</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Post 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Production Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
-                <!-- Hero Section -->
-                <section class="hero-section" data-scroll-section>
-                    <div class="container" style="position: relative; display: flex; align-items: center; justify-content: space-between;">
-                        <div>
-                            <h1 class="hero-text fsize-20">Our Manufacturing Magic</h1>
-                            <p class="lead">Where Tradition Meets Innovation</p>
-                        </div>
-                        <!-- Responsive Image Section -->
-                        <!-- <div class="hero-image" style="position: absolute; right: 0;top: 80%; max-width: 50%; width: 100%;">
+    <!-- Hero Section -->
+    <section class="hero-section" data-scroll-section>
+        <div class="container"
+            style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <h1 class="hero-text fsize-20">Our Manufacturing Magic</h1>
+                <p class="lead">Where Tradition Meets Innovation</p>
+            </div>
+            <!-- Responsive Image Section -->
+            <!-- <div class="hero-image" style="position: absolute; right: 0;top: 80%; max-width: 50%; width: 100%;">
                             <img src="star.png" alt="Hero Section Image" style="max-width: 100%; max-height: auto; width: 200px; display: block;">
                         </div> -->
-                        <!-- Responsive Image Section -->
-                    <!-- Responsive Image Section -->
-                        <div class="hero-image">
-                            <img src="star.png" alt="Hero Section Image" />
-                        </div>
-
-
-                    </div>
-                </section>
-
-
-        <!-- Image Section -->
-        <section class="responsive-images py-5" data-scroll-section>
-
-            <div class="container border-bottom-black">
-                <div class="row">
-                    <div class="col-md-4 image-card">
-                        <img src="https://images.unsplash.com/photo-1655280056654-dda90a3e17de?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Image 1" class="img-fluid" loading="lazy">
-                        <div class="mt-3">
-                            <div class="row">
-                                <!-- First Section -->
-                                <div class="col-12 col-md-6 mb-2">
-                                    <h5 class="text-center fw-bold">20 +</h5>
-                                    <p class="text-center text-muted fs-6 fs-md-5">
-                                        Years of Experience
-                                    </p>
-                                </div>
-                                <!-- Second Section -->
-                                <div class="col-12 col-md-6">
-                                    <h5 class="text-center fw-bold">5k +</h5>
-                                    <p class="text-center text-muted fs-6 fs-md-5">
-                                        customers
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="col-md-4 mt-5 image-card position-relative">
-                        <img src="https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Image 2" class="img-fluid" loading="lazy">
-                        <!-- Round Div -->
-                        <div class="round-div">
-                            <div class="star">★</div>
-                            <div class="circle-text">
-                                <span>E</span>
-                                <span>l</span>
-                                <span>e</span>
-                                <span>g</span>
-                                <span>a</span>
-                                <span>n</span>
-                                <span>c</span>
-                                <span>e</span>
-                                <span>D</span>
-                                <span>e</span>
-                                <span>s</span>
-                                <span>I</span>
-                                <span>G</span>
-                                <span>N</span>
-                                <span>I</span>
-                                <span>N</span>
-                                <span>G</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 image-card">
-                        <img src="https://images.unsplash.com/photo-1654110509803-4f53e0f9c192?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Image 3" class="img-fluid" loading="lazy">
-                        <div class="mt-3">
-                            <p class="text-center text-muted">
-                                Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
-                                latest trends, we’ve got you covered.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container mt-5">
-                <div class="row align-items-center">
-                    <!-- Left Section: Heading -->
-                    <div class="col-12 col-md-8">
-                        <h1 class="text-start fw-bold mb-3">Get in Touch with Our Textile Mastery</h1>
-                    </div>
-                    <!-- Right Section: Button -->
-                    <div class="col-12 col-md-4 text-md-end text-center">
-                        <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold">Get Services</a>
-                    </div>
-                </div>
+            <!-- Responsive Image Section -->
+            <!-- Responsive Image Section -->
+            <div class="hero-image">
+                <img src="star.png" alt="Hero Section Image" />
             </div>
 
 
-        </section>
+        </div>
+    </section>
 
-        <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
-            <!-- Background Images -->
-            <div class="top-right-bg"></div>
-            <div class="bottom-left-bg"></div>
-        
-            <!-- Content Section -->
-            <div class="container">
-                <div class="row">
+
+    <!-- Image Section -->
+    <section class="responsive-images py-5" data-scroll-section>
+
+        <div class="container border-bottom-black">
+            <div class="row">
+                <div class="col-md-4 image-card">
+                    <img src="https://images.unsplash.com/photo-1655280056654-dda90a3e17de?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 1" class="img-fluid" loading="lazy">
                     <div class="mt-3">
                         <div class="row">
                             <!-- First Section -->
                             <div class="col-12 col-md-6 mb-2">
-                                <h1 class="hero-text fsize-20">Why Our Manufacturing</h1>
-                                <h1>Your Trusted Textile<br>Manufacturer</h1>
-                                <p class="text-muted">
-                                    We believe in creating fashion that not only makes you look good<br> but also contributes to a better future.
+                                <h5 class="text-center fw-bold">20 +</h5>
+                                <p class="text-center text-muted fs-6 fs-md-5">
+                                    Years of Experience
+                                </p>
+                            </div>
+                            <!-- Second Section -->
+                            <div class="col-12 col-md-6">
+                                <h5 class="text-center fw-bold">5k +</h5>
+                                <p class="text-center text-muted fs-6 fs-md-5">
+                                    customers
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <!-- Image Section -->
-                    <div class="col-md-6 image-card">
-                        <img src="https://images.unsplash.com/photo-1619239635762-8132f6dba51c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Image 1" class="img-fluid" loading="lazy">
+
+
+                </div>
+
+                <div class="col-md-4 mt-5 image-card position-relative">
+                    <img src="https://images.unsplash.com/photo-1654111069497-dfd4afcff006?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 2" class="img-fluid" loading="lazy">
+                    <!-- Round Div -->
+                    <div class="round-div">
+                        <div class="star">★</div>
+                        <div class="circle-text">
+                            <span>E</span>
+                            <span>l</span>
+                            <span>e</span>
+                            <span>g</span>
+                            <span>a</span>
+                            <span>n</span>
+                            <span>c</span>
+                            <span>e</span>
+                            <span>D</span>
+                            <span>e</span>
+                            <span>s</span>
+                            <span>I</span>
+                            <span>G</span>
+                            <span>N</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>G</span>
+                        </div>
                     </div>
-                    <div class="col-md-6 image-card mt-5">
-                        <img src="https://plus.unsplash.com/premium_photo-1723672935578-81c0f7f60c2e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Image 3" class="img-fluid" loading="lazy">
-                        <div class="mt-3">
-                            <p class="text-center text-muted">
-                                Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
-                                latest trends, we’ve got you covered.
+
+                </div>
+
+                <div class="col-md-4 image-card">
+                    <img src="https://images.unsplash.com/photo-1654110509803-4f53e0f9c192?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 3" class="img-fluid" loading="lazy">
+                    <div class="mt-3">
+                        <p class="text-center text-muted">
+                            Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
+                            latest trends, we’ve got you covered.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <!-- Left Section: Heading -->
+                <div class="col-12 col-md-8">
+                    <h1 class="text-start fw-bold mb-3">Get in Touch with Our Textile Mastery</h1>
+                </div>
+                <!-- Right Section: Button -->
+                <div class="col-12 col-md-4 text-md-end text-center">
+                    <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold">Get Services</a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
+        <!-- Background Images -->
+        <div class="top-right-bg"></div>
+        <div class="bottom-left-bg"></div>
+
+        <!-- Content Section -->
+        <div class="container">
+            <div class="row">
+                <div class="mt-3">
+                    <div class="row">
+                        <!-- First Section -->
+                        <div class="col-12 col-md-6 mb-2">
+                            <h1 class="hero-text fsize-20">Why Our Manufacturing</h1>
+                            <h1>Your Trusted Textile<br>Manufacturer</h1>
+                            <p class="text-muted">
+                                We believe in creating fashion that not only makes you look good<br> but also
+                                contributes to a better future.
                             </p>
-                            <div class="text-center mt-3">
-                                <a href="#" class="btn learn-more-btn">
-                                    Learn More <span class="arrow border-bottom-black">→</span>
-                                </a>
-                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Section -->
+                <div class="col-md-6 image-card">
+                    <img src="https://images.unsplash.com/photo-1619239635762-8132f6dba51c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 1" class="img-fluid" loading="lazy">
+                </div>
+                <div class="col-md-6 image-card mt-5">
+                    <img src="https://plus.unsplash.com/premium_photo-1723672935578-81c0f7f60c2e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 3" class="img-fluid" loading="lazy">
+                    <div class="mt-3">
+                        <p class="text-center text-muted">
+                            Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
+                            latest trends, we’ve got you covered.
+                        </p>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn learn-more-btn">
+                                Learn More <span class="arrow border-bottom-black">→</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        
-            <!-- Call-to-Action Section -->
-            <!-- <div class="container mt-5">
+        </div>
+
+        <!-- Call-to-Action Section -->
+        <!-- <div class="container mt-5">
                 <div class="row align-items-center">
                     <div class="col-12 col-md-8">
                         <h1 class="text-start fw-bold mb-3">Get in Touch with Our Textile Mastery</h1>
@@ -996,194 +1073,211 @@
                     </div>
                 </div>
             </div> -->
-        </section>
+    </section>
 
 
-        <section class="responsive-images py-5 position-relative" data-scroll-section>
-            <!-- Background Images -->
-            <!-- <div class="top-right-bg"></div>
+    <section class="responsive-images py-5 position-relative" data-scroll-section>
+        <!-- Background Images -->
+        <!-- <div class="top-right-bg"></div>
             <div class="bottom-left-bg"></div> -->
-        
-            <!-- Content Section -->
-            <div class="container">
-                <div class="row">
-                    <div class="mt-3">
-                        <div class="row">
-                            <!-- First Section -->
-                            <div class="col-12 col-md-6 mb-2">
-                                <h1 class="hero-text fsize-20">Our Services</h1>
-                                <h1>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the latest trends, we’ve got you covered.</h1>
-                                <!-- <p class="text-muted">
+
+        <!-- Content Section -->
+        <div class="container">
+            <div class="row">
+                <div class="mt-3">
+                    <div class="row">
+                        <!-- First Section -->
+                        <div class="col-12 col-md-6 mb-2">
+                            <h1 class="hero-text fsize-20">Our Services</h1>
+                            <h1>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking
+                                the latest trends, we’ve got you covered.</h1>
+                            <!-- <p class="text-muted">
                                     We believe in creating fashion that not only makes you look good<br> but also contributes to a better future.
                                 </p> -->
-                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Image Section -->
-                    <div class="container">
-                        <div class="row justify-content-center gy-4">
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
-                                <img src="geometric.png"
-                                    alt="Image 1" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
-                                    <h3>Custom Clothing Manufacturing</h3>
-                                    <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
-                                <img src="5yh.png"
-                                    alt="Image 2" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
-                                    <h3>Bulk Textile or Clothing Production</h3>
-                                    <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
-                                <img src="eth.png"
-                                    alt="Image 3" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
-                                    <h3>Fabric Sourcing and Supply</h3>
-                                    <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
-                                    <img src="rntrbr.png"
-                                    alt="Image 4" class="img-fluid" style="height:80px; width:auto;" loading="lazy">
-                                    <h3>Private Label Manufacturing</h3>
-                                    <p>From custom orders to large-scale production, we have the experience and expertise to meet your unique fashion manufacturing needs.</p>
-                            </div>
-                        
+                <!-- Image Section -->
+                <div class="container">
+                    <div class="row justify-content-center gy-4">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
+                            <img src="geometric.png" alt="Image 1" class="img-fluid" style="height:80px; width:auto;"
+                                loading="lazy">
+                            <h3>Custom Clothing Manufacturing</h3>
+                            <p>From custom orders to large-scale production, we have the experience and expertise to
+                                meet your unique fashion manufacturing needs.</p>
                         </div>
-                    </div>
-                    
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
+                            <img src="5yh.png" alt="Image 2" class="img-fluid" style="height:80px; width:auto;"
+                                loading="lazy">
+                            <h3>Bulk Textile or Clothing Production</h3>
+                            <p>From custom orders to large-scale production, we have the experience and expertise to
+                                meet your unique fashion manufacturing needs.</p>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
+                            <img src="eth.png" alt="Image 3" class="img-fluid" style="height:80px; width:auto;"
+                                loading="lazy">
+                            <h3>Fabric Sourcing and Supply</h3>
+                            <p>From custom orders to large-scale production, we have the experience and expertise to
+                                meet your unique fashion manufacturing needs.</p>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-3 border border-dark">
+                            <img src="rntrbr.png" alt="Image 4" class="img-fluid" style="height:80px; width:auto;"
+                                loading="lazy">
+                            <h3>Private Label Manufacturing</h3>
+                            <p>From custom orders to large-scale production, we have the experience and expertise to
+                                meet your unique fashion manufacturing needs.</p>
+                        </div>
 
-                    <div class="container my-4">
-                        <div class="moving-banner text-black py-2">
-                            <div class="text-wrapper d-flex">
-                                <span class="mx-auto">✨ Welcome to our sleek and modern textile garments Zalo! 🌟 Dive into a world of exquisite designs and craftsmanship today. 🧵</span>
-                                <span class="mx-auto">🚀 Discover innovation, style, and quality tailored to perfection! 🌐 Explore now and be inspired by our collection. 🧵</span>
-                            </div>
+                    </div>
+                </div>
+
+
+                <div class="container my-4">
+                    <div class="moving-banner text-black py-2">
+                        <div class="text-wrapper d-flex">
+                            <span class="mx-auto">✨ Welcome to our sleek and modern textile garments Zalo! 🌟 Dive into
+                                a world of exquisite designs and craftsmanship today. 🧵</span>
+                            <span class="mx-auto">🚀 Discover innovation, style, and quality tailored to perfection! 🌐
+                                Explore now and be inspired by our collection. 🧵</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
-        <!-- stared Defect percentage sections  -->
-        <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
-            <!-- Background Images -->
-            <div class="top-right-bg"></div>
-            <div class="bottom-left-bg"></div>
-        
-            <!-- Content Section -->
-            <div class="container">
-                <div class="row">
-                    <!-- Image Section -->
-                    <div class="col-md-6 image-card">
-                        <img src="https://images.unsplash.com/photo-1619239635762-8132f6dba51c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Image 1" class="img-fluid" loading="lazy">
-                    </div>
-        
-                    <div class="col-md-6 image-card mt-5">
-                        <h1 id="counter" class="display-1">0%</h1>
-                        <h2>Defect Rate</h2>
-                        <p>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the latest trends, we’ve got you covered. Our commitment to sustainability and ethical practices ensures that every piece you receive from us is not only stylish but also environmentally responsible.</p>
-                        <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold" style="background-color: #C05102;">Get Services</a>
-                    </div>
+    <!-- stared Defect percentage sections  -->
+    <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
+        <!-- Background Images -->
+        <div class="top-right-bg"></div>
+        <div class="bottom-left-bg"></div>
+
+        <!-- Content Section -->
+        <div class="container">
+            <div class="row">
+                <!-- Image Section -->
+                <div class="col-md-6 image-card">
+                    <img src="https://images.unsplash.com/photo-1619239635762-8132f6dba51c?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Image 1" class="img-fluid" loading="lazy">
+                </div>
+
+                <div class="col-md-6 image-card mt-5">
+                    <h1 id="counter" class="display-1">0%</h1>
+                    <h2>Defect Rate</h2>
+                    <p>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the
+                        latest trends, we’ve got you covered. Our commitment to sustainability and ethical practices
+                        ensures that every piece you receive from us is not only stylish but also environmentally
+                        responsible.</p>
+                    <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold"
+                        style="background-color: #C05102;">Get Services</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-                <!-- Started Video Module Section -->
-                <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
-                    <div class="container-fluid px-0">
-                        <div class="video-wrapper position-relative">
-                            <!-- Video Element -->
-                            <video class="video-full-width" controls autoplay muted loop>
-                                <source src="grettings.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <!-- Overlay Content (Optional) -->
-                            <!-- <div class="video-overlay text-center text-white d-flex flex-column justify-content-center align-items-center">
+    <!-- Started Video Module Section -->
+    <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
+        <div class="container-fluid px-0">
+            <div class="video-wrapper position-relative">
+                <!-- Video Element -->
+                <video class="video-full-width" controls autoplay muted loop>
+                    <source src="grettings.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Overlay Content (Optional) -->
+                <!-- <div class="video-overlay text-center text-white d-flex flex-column justify-content-center align-items-center">
                                 <h2 class="display-4 fw-bold">Welcome to Modern Textile</h2>
                                 <p class="lead">Discover the future of garment production and design</p>
                                 <a href="#" class="btn btn-warning text-white px-4 py-2 mt-3">Explore More</a>
                             </div> -->
-                        </div>
-                    </div>
-                </section>
+            </div>
+        </div>
+    </section>
 
 
-                <section class="responsive-images py-5 position-relative" data-scroll-section>
-                    <!-- Content Section -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="mt-3">
-                                <div class="row">
-                                    <!-- First Section -->
-                                    <div class="col-12 col-md-6 mb-2">
-                                        <h1 class="hero-text fsize-20">Our history</h1>
-                                        <h1>Our eco-friendly practices, responsible sourcing, and dedication to reducing our carbon footprint make us a responsible choice for fashion individuals and brands.</h1>
-                                        <!-- <p class="text-muted">
+    <section class="responsive-images py-5 position-relative" data-scroll-section>
+        <!-- Content Section -->
+        <div class="container">
+            <div class="row">
+                <div class="mt-3">
+                    <div class="row">
+                        <!-- First Section -->
+                        <div class="col-12 col-md-6 mb-2">
+                            <h1 class="hero-text fsize-20">Our history</h1>
+                            <h1>Our eco-friendly practices, responsible sourcing, and dedication to reducing our carbon
+                                footprint make us a responsible choice for fashion individuals and brands.</h1>
+                            <!-- <p class="text-muted">
                                             We believe in creating fashion that not only makes you look good<br> but also contributes to a better future.
                                         </p> -->
-                                    </div>
-                                </div>
-                            </div>
-            
-                            <!-- Image Section -->
-                            <div class="container">
-                                <div class="row justify-content-center gy-4">
-                                    <div class="col-12 col-sm-3 col-md-4 col-lg-4">
-                                        <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/kjnv.png"
-                                            alt="Image 1" class="img-fluid" loading="lazy">
-                                    </div>
-                                    <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
-                                        <h3>Expanding Horizons</h3>
-                                        <p>Since 1987, we have been committed to excellence and innovation. Guided by a passion for progress, we strive to shape the future with impactful solutions.</p>
-                                        <p class="history-date">1987</p>
-                                    </div>
-                                    
-                                    <div class="col-12 col-sm-3 col-md-4 col-lg-4">
-                                        <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/thnthn.png"
-                                            alt="Image 3" class="img-fluid" loading="lazy">
-                                    </div>
-                                    
-                                </div>
+                        </div>
+                    </div>
+                </div>
 
-                            </div>
+                <!-- Image Section -->
+                <div class="container">
+                    <div class="row justify-content-center gy-4">
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4">
+                            <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/kjnv.png" alt="Image 1"
+                                class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
+                            <h3>Expanding Horizons</h3>
+                            <p>Since 1987, we have been committed to excellence and innovation. Guided by a passion for
+                                progress, we strive to shape the future with impactful solutions.</p>
+                            <p class="history-date">1987</p>
+                        </div>
 
-                            <div class="container my-3">
-                                <div class="custom-border">
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                                </div>
-                            </div>
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4">
+                            <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/thnthn.png"
+                                alt="Image 3" class="img-fluid" loading="lazy">
+                        </div>
 
-                            <div class="container mt-3">
-                                <div class="row justify-content-center gy-4">
-                                    <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
-                                        <h3>Founding the Legacy</h3>
-                                        <p>Established on the foundation of vision and perseverance, we have built a legacy that inspires trust and excellence. Our journey is rooted in innovation, shaping a future defined by impact and growth.</p>
-                                        <p class="history-date">1975</p>
-                                    </div>
+                    </div>
 
-                                    <div class="col-12 col-sm-3 col-md-4 col-lg-4">
-                                        <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/sjkgfb.png"
-                                            alt="Image 1" class="img-fluid" loading="lazy">
-                                    </div>
-                                    
-                                    <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
-                                        <h3>Modernization and Sustainability</h3>
-                                        <p>Embracing the future with cutting-edge innovation, we integrate modernization with sustainable practices. Our commitment lies in creating solutions that drive progress while preserving resources for generations to come.</p>
-                                        <p class="history-date">1990</p>
-                                    </div>
-                                    
-                                </div>
+                </div>
 
-                            </div>
-                            
-            
-                            <!-- <div class="container my-4">
+                <div class="container my-3">
+                    <div class="custom-border">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="container mt-3">
+                    <div class="row justify-content-center gy-4">
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
+                            <h3>Founding the Legacy</h3>
+                            <p>Established on the foundation of vision and perseverance, we have built a legacy that
+                                inspires trust and excellence. Our journey is rooted in innovation, shaping a future
+                                defined by impact and growth.</p>
+                            <p class="history-date">1975</p>
+                        </div>
+
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4">
+                            <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/sjkgfb.png"
+                                alt="Image 1" class="img-fluid" loading="lazy">
+                        </div>
+
+                        <div class="col-12 col-sm-3 col-md-4 col-lg-4 text-center">
+                            <h3>Modernization and Sustainability</h3>
+                            <p>Embracing the future with cutting-edge innovation, we integrate modernization with
+                                sustainable practices. Our commitment lies in creating solutions that drive progress
+                                while preserving resources for generations to come.</p>
+                            <p class="history-date">1990</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- <div class="container my-4">
                                 <div class="moving-banner text-black py-2">
                                     <div class="text-wrapper d-flex">
                                         <span class="mx-auto">✨ Welcome to our sleek and modern textile garments Zalo! 🌟 Dive into a world of exquisite designs and craftsmanship today. 🧵</span>
@@ -1191,177 +1285,196 @@
                                     </div>
                                 </div>
                             </div> -->
-                        </div>
-                    </div>
-                </section>
+            </div>
+        </div>
+    </section>
 
-                <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
-                    <!-- Background Images -->
-                    <div class="top-right-bg"></div>
-                    <!-- <div class="bottom-left-bg"></div> -->
-                
-                    <!-- Content Section -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="mt-3">
-                                <div class="row">
-                                    <!-- First Section -->
-                                    <div class="col-12 col-md-6 mb-2">
-                                        <h1 class="hero-text fsize-20">FAQ</h1>
-                                        <h1>Cutting-Edge Fashion &<br>Textile Solutions</h1>
-                                        <p class="text-muted">
-                                            We believe in creating fashion that not only makes you look good<br>but also contributes to a better future.
-                                        </p>
-                                        
-                                        <!-- Dropdown Button 1 -->
-                                
-                                        <div class="accordion" id="accordionExample">
-                                            <!-- First Item -->
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                        What types of textiles do you manufacture?
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        We manufacture a wide variety of textiles tailored to industry needs, including woven fabrics, knit fabrics, and technical textiles.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                
-                                            <!-- Second Item -->
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingTwo">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        Can I request custom fabric designs?
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        Yes, we offer custom fabric design services to meet your specific requirements. Contact our design team for more information.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                
-                                            <!-- Third Item -->
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingThree">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                        What is your minimum order quantity for textiles?
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body">
-                                                        Our minimum order quantities vary depending on the type of fabric and production process. Please reach out to our sales team for specific details.
-                                                    </div>
-                                                </div>
-                                            </div>
+    <section class="responsive-images py-5 bg-white position-relative" data-scroll-section>
+        <!-- Background Images -->
+        <div class="top-right-bg"></div>
+        <!-- <div class="bottom-left-bg"></div> -->
+
+        <!-- Content Section -->
+        <div class="container">
+            <div class="row">
+                <div class="mt-3">
+                    <div class="row">
+                        <!-- First Section -->
+                        <div class="col-12 col-md-6 mb-2">
+                            <h1 class="hero-text fsize-20">FAQ</h1>
+                            <h1>Cutting-Edge Fashion &<br>Textile Solutions</h1>
+                            <p class="text-muted">
+                                We believe in creating fashion that not only makes you look good<br>but also contributes
+                                to a better future.
+                            </p>
+
+                            <!-- Dropdown Button 1 -->
+
+                            <div class="accordion" id="accordionExample">
+                                <!-- First Item -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            What types of textiles do you manufacture?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            We manufacture a wide variety of textiles tailored to industry needs,
+                                            including woven fabrics, knit fabrics, and technical textiles.
                                         </div>
-                                        
-
                                     </div>
-                                    
+                                </div>
 
-                                    <div class="col-12 col-md-6 mb-2 image-card">
-                                        <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/qeqbqeb.png"
-                                        alt="Image 1" class="img-fluid" loading="lazy">
+                                <!-- Second Item -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Can I request custom fabric designs?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Yes, we offer custom fabric design services to meet your specific
+                                            requirements. Contact our design team for more information.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Third Item -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            What is your minimum order quantity for textiles?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Our minimum order quantities vary depending on the type of fabric and
+                                            production process. Please reach out to our sales team for specific details.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
+                        </div>
+
+
+                        <div class="col-12 col-md-6 mb-2 image-card">
+                            <img src="https://factorika.peerduck.com/wp-content/uploads/2024/01/qeqbqeb.png"
+                                alt="Image 1" class="img-fluid" loading="lazy">
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                
-                <section class="responsive-images py-5 bg-white position-relative overlayer" data-scroll-section>
-                    <div class="overlay" style="text-align: center;color: white; justify-content: center;">
-                        <div class="content" style="">
-                            <h1>Stitching Style, Weaving Dreams</h1>
-                            <p>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the latest trends, we’ve got you covered.</p>
-                        </div>
-                       
-                    </div>
-                </section>
-               
 
-        
+    <section class="responsive-images py-5 bg-white position-relative overlayer" data-scroll-section>
+        <div class="overlay" style="text-align: center;color: white; justify-content: center;">
+            <div class="content" style="">
+                <h1>Stitching Style, Weaving Dreams</h1>
+                <p>Whether you’re a designer looking for a trusted partner or a fashion enthusiast seeking the latest
+                    trends, we’ve got you covered.</p>
+                <a href="#" class="btn btn-warning text-white px-4 py-2 fw-bold custom-btn"
+                    style="background-color: #C05102;">
+                    Get Services
+                </a>
 
-        
+            </div>
 
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; Nizum Daru (Louis). 2024 All Rights Reserved.</p>
-        </footer>
+        </div>
+    </section>
 
-        <!-- Locomotive Smooth Scroll JS -->
-       
-        <script>
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector('[data-scroll-container]'),
-                smooth: true,
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Nizum Daru (Louis). 2024 All Rights Reserved.</p>
+    </footer>
+
+    <!-- Locomotive Smooth Scroll JS -->
+
+    <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+        });
+    </script>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from(".hero-text", {
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                ease: "power3.out",
+                delay: 0.3
             });
-        </script>
-
-          
-
-           
-
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                gsap.from(".hero-text", {
-                    opacity: 0,
-                    y: 50,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    delay: 0.3
-                });
-                gsap.from(".lead", {
-                    opacity: 0,
-                    y: 50,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    delay: 0.6
-                });
+            gsap.from(".lead", {
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                ease: "power3.out",
+                delay: 0.6
             });
-        </script>
+        });
+    </script>
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // GSAP ScrollTrigger Countdown Animation
-                const counter = document.getElementById("counter");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // GSAP ScrollTrigger Countdown Animation
+            const counter = document.getElementById("counter");
 
-                gsap.registerPlugin(ScrollTrigger);
+            gsap.registerPlugin(ScrollTrigger);
 
-                gsap.to(counter, {
-                    scrollTrigger: {
-                        trigger: counter,
-                        start: "top 80%", // Start animation when counter is 80% visible
-                        end: "top 50%",  // Ends animation when it's 50% visible
-                        scrub: 1,        // Smooth animation based on scroll
-                    },
-                    textContent: 98, // Final value for the countdown
-                    duration: 4, // 4 seconds
-                    ease: "power2.out",
-                    snap: { textContent: 1 }, // Round to nearest integer
-                    onUpdate: function () {
-                        // Update the inner text with percentage
-                        counter.innerText = Math.round(counter.textContent) + "%";
-                    },
-                });
+            gsap.to(counter, {
+                scrollTrigger: {
+                    trigger: counter,
+                    start: "top 80%", // Start animation when counter is 80% visible
+                    end: "top 50%",  // Ends animation when it's 50% visible
+                    scrub: 1,        // Smooth animation based on scroll
+                },
+                textContent: 98, // Final value for the countdown
+                duration: 4, // 4 seconds
+                ease: "power2.out",
+                snap: { textContent: 1 }, // Round to nearest integer
+                onUpdate: function () {
+                    // Update the inner text with percentage
+                    counter.innerText = Math.round(counter.textContent) + "%";
+                },
             });
-        </script>
+        });
+    </script>
 
 
-        
 
-        <!-- Bootstrap Bundle JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
 
-    </body>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.4/locomotive-scroll.min.js"></script>
 
-    </html>
+</body>
+
+</html>
