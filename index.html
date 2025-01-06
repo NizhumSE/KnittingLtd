@@ -80,34 +80,7 @@
         }
 
 
-                    /* .custom-border {
-                position: relative;
-                border-bottom: 2px solid orange;
-                height: 20px;
-                }
-                .circle {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 15px;
-                height: 15px;
-                background-color: orange;
-                border-radius: 50%;
-                }
-                .circle:nth-child(1) {
-                left: 20%;
-                transform: translate(-50%, 0);
-                }
-                .circle:nth-child(2) {
-                left: 50%;
-                transform: translate(-50%, 0);
-                }
-                .circle:nth-child(3) {
-                right: 20%;
-                transform: translate(50%, 0);
-                } */
-
-                .custom-border {
+     .custom-border {
       position: relative;
       border-bottom: 2px solid #E96304;
       height: 20px;
@@ -122,6 +95,14 @@
       color: orange;
       font-weight: bold;
     } */
+    .accordion-item {
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .collapsed::after{
+            color: #E96304 !important;
+        }
     .custom-border::before {
     content: "<";
     position: absolute;
@@ -175,6 +156,40 @@
       right: 20%;
       transform: translate(50%, 0);
     }
+
+    .accordion{
+        font-size: 18px;
+    }
+    .accordion::after{
+        font-size: 18px;
+        color: #E96304 !important; 
+    }
+    .accordion-button{
+        font-size: 24px;
+            
+    }
+    .accordion-button:not(.collapsed) {
+    color: #E96304 !important; /* Forcefully override the color */
+    background-color: transparent !important; /* Remove the background color */
+    box-shadow: none !important; /* Remove the box shadow */
+   }
+   .button.accordion-button::after {
+    color: #E96304 !important;
+   }
+   .accordion-button:focus {
+    z-index: 3;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+   }
+
+   button:focus:not(:focus-visible) {
+    outline: none !important;
+    outline-color: none !important;
+    outline-style: initial;
+    outline-width: 0px;
+    border-color: transparent !important;
+}
 
 
     .history-date {
@@ -1138,43 +1153,52 @@
                                     </p>
                                     
                                     <!-- Dropdown Button 1 -->
-                                    <button class="btn btn-primary d-flex justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Dropdown 1
-                                        <span class="ms-2">
-                                            <i class="bi bi-caret-down-fill"></i>
-                                        </span>
-                                    </button>
-                                    <div class="collapse" id="collapseOne">
-                                        <div class="card card-body">
-                                            Content for Dropdown 1.
+                              
+                                    <div class="accordion" id="accordionExample">
+                                        <!-- First Item -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                    What types of textiles do you manufacture?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    We manufacture a wide variety of textiles tailored to industry needs, including woven fabrics, knit fabrics, and technical textiles.
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!-- Second Item -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Can I request custom fabric designs?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    Yes, we offer custom fabric design services to meet your specific requirements. Contact our design team for more information.
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <!-- Third Item -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    What is your minimum order quantity for textiles?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    Our minimum order quantities vary depending on the type of fabric and production process. Please reach out to our sales team for specific details.
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                
-                                    <!-- Dropdown Button 2 -->
-                                    <button class="btn btn-primary d-flex justify-content-between w-100 mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Dropdown 2
-                                        <span class="ms-2">
-                                            <i class="bi bi-caret-down-fill"></i>
-                                        </span>
-                                    </button>
-                                    <div class="collapse" id="collapseTwo">
-                                        <div class="card card-body">
-                                            Content for Dropdown 2.
-                                        </div>
-                                    </div>
-                                
-                                    <!-- Dropdown Button 3 -->
-                                    <button class="btn btn-primary d-flex justify-content-between w-100 mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Dropdown 3
-                                        <span class="ms-2">
-                                            <i class="bi bi-caret-down-fill"></i>
-                                        </span>
-                                    </button>
-                                    <div class="collapse" id="collapseThree">
-                                        <div class="card card-body">
-                                            Content for Dropdown 3.
-                                        </div>
-                                    </div>
+                                    
+
                                 </div>
                                 
 
@@ -1267,22 +1291,7 @@
         });
     </script>
 
-<script>
-    // JavaScript to ensure that only one collapse section is open at a time
-    var collapseElements = document.querySelectorAll('.collapse');
-    collapseElements.forEach(function(collapseElement) {
-        collapseElement.addEventListener('show.bs.collapse', function () {
-            collapseElements.forEach(function(innerCollapse) {
-                if(innerCollapse !== collapseElement) {
-                    var bsCollapse = new bootstrap.Collapse(innerCollapse, {
-                        toggle: false
-                    });
-                    bsCollapse.hide();
-                }
-            });
-        });
-    });
-</script>
+
     
 
     <!-- Bootstrap Bundle JS -->
